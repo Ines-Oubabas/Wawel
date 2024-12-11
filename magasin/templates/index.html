@@ -9,102 +9,103 @@
     <script src="{% static 'js/script.js' %}" defer></script>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="{% static 'images/logo.png' %}" alt="Logo Wawel" class="logo">
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <img class="logo" src="{% static 'images/logo.png' %}" alt="Logo Wawel">
+
+        <ul>
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/produits/">Menu</a></li>
+            <li><a href="/about/">À propos</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section Héro -->
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Le gâteau parfait, chaque jour !</h1>
+            <p>Des gâteaux et pâtisseries faits à la main, préparés avec amour et tradition.</p>
+            <div class="hero-buttons">
+                <a href="/produits/" class="btn">Voir le menu</a>
+            </div>
         </div>
-        <h1>Wawel - Pâtisserie et Boulangerie</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Accueil</a></li>
-                <li><a href="/produits/">Produits</a></li>
-                <li><a href="/contact/">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="hero-image">
+            <img src="{% static 'images/hero-cake.jpg' %}" alt="Gâteau délicieux">
+        </div>
     </header>
 
-    <main>
-        <!-- Section principale -->
-        <section class="main-welcome">
-            <div class="background-slideshow">
-                <img src="{% static 'images/welcome1.jpg' %}" alt="Image 1">
-                <img src="{% static 'images/welcome2.jpg' %}" alt="Image 2">
-                <img src="{% static 'images/welcome3.jpg' %}" alt="Image 3">
-                <img src="{% static 'images/welcome4.jpg' %}" alt="Image 4">
+    <!-- Section Boutique -->
+    <section class="store">
+        <h2>Bienvenue dans notre boutique</h2>
+        <p>Découvrez notre large gamme de gâteaux faits maison, cookies, sandwiches, et bien plus encore !</p>
+        <div class="categories">
+            <div class="category">
+                <img src="{% static 'images/cake-icon.png' %}" alt="Gâteau">
+                <p>Gâteaux</p>
             </div>
-        <section>
-            <h2>Bienvenue chez Wawel</h2>
-            <p>Découvrez nos délicieux produits artisanaux, faits avec passion et tradition.</p>
-            <p>
-                <a href="/produits/" class="btn">Voir nos produits</a>
-            </p>
-        </section>
-
-        <!-- Section promotion -->
-        <section class="promotion">
-            <h2>Inscrivez-vous et profitez de -10% sur votre premier achat !</h2>
-            <p><a href="/contact/" class="btn">S'inscrire maintenant</a></p>
-        </section>
-
-        <!-- Section témoignages -->
-        <section id="testimonials">
-            <h2>Ce que nos clients disent de nous</h2>
-            <div class="testimonial-container">
-                <button class="testimonial-btn left-btn" id="prev-btn">&#10094;</button>
-                <div class="testimonial-slider">
-                    <div class="testimonial">
-                        <img src="{% static 'images/client01.jpg' %}" alt="Client 1">
-                        <p>"Les meilleurs beignes que j’ai jamais goûtés ! Service exceptionnel."</p>
-                        <h4>- Marie Dupont</h4>
-                    </div>
-                    <div class="testimonial">
-                        <img src="{% static 'images/client02.jpg' %}" alt="Client 2">
-                        <p>"Un service client remarquable, des produits délicieux !"</p>
-                        <h4>- Jean Martin</h4>
-                    </div>
-                    <div class="testimonial">
-                        <img src="{% static 'images/client03.jpg' %}" alt="Client 3">
-                        <p>"Un goût authentique et un accueil chaleureux. Je recommande."</p>
-                        <h4>- Sophie Tremblay</h4>
-                    </div>
-                </div>
-                <button class="testimonial-btn right-btn" id="next-btn">&#10095;</button>
+            <div class="category">
+                <img src="{% static 'images/sandwich-icon.png' %}" alt="Sandwich">
+                <p>Sandwichs</p>
             </div>
-        </section>
-        
+            <div class="category">
+                <img src="{% static 'images/cookie-icon.png' %}" alt="Cookie">
+                <p>Cookies</p>
+            </div>
+            <div class="category">
+                <img src="{% static 'images/bread-icon.png' %}" alt="Pain">
+                <p>Pains</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- Section localisation -->
-        <section class="location">
-            <h2>Nous localiser</h2>
-            <p>2543 Rue Ontario E, Montréal, QC H2K 1W5</p>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.6334571182034!2d-73.56725668444739!3d45.51613617910144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a3a0a7df4f3%3A0x3e0a7b2e0e7d4e20!2s2543%20Rue%20Ontario%20E%2C%20Montr%C3%A9al%2C%20QC%20H2K%201W5%2C%20Canada!5e0!3m2!1sen!2sca!4v1690000000000" 
-                width="100%" 
-                height="300" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy"></iframe>
-        </section>
+    <!-- Section À propos -->
+    <section class="about">
+        <div class="about-content">
+            <h2>À propos de Wawel</h2>
+            <p>Depuis plus de 20 ans, Wawel prépare des produits de boulangerie et pâtisserie délicieux, rendant chaque moment spécial pour nos clients.</p>
+            <a href="/about/" class="btn">En savoir plus</a>
+        </div>
+        <div class="about-image">
+            <img src="{% static 'images/about.jpg' %}" alt="À propos de Wawel">
+        </div>
+    </section>
 
-        <!-- Section FAQ -->
-        <section class="faq">
-            <h2>FAQ</h2>
-            <details>
-                <summary>Quels sont vos horaires d'ouverture ?</summary>
-                <p>Nous sommes ouverts tous les jours de 8h à 20h.</p>
-            </details>
-            <details>
-                <summary>Proposez-vous des options sans gluten ?</summary>
-                <p>Oui, nous avons des options sans gluten pour nos pains et pâtisseries.</p>
-            </details>
-            <details>
-                <summary>Offrez-vous des livraisons ?</summary>
-                <p>Oui, nous offrons des livraisons dans un rayon de 10 km.</p>
-            </details>
-        </section>
-    </main>
+    <!-- Section Newsletter -->
+    <section class="newsletter">
+        <h2>Abonnez-vous à notre Newsletter</h2>
+        <p>Recevez les dernières actualités et des offres exclusives directement dans votre boîte mail.</p>
+        <form action="#" method="POST" class="newsletter-form">
+            <input type="email" name="email" placeholder="Entrez votre email" required>
+            <button type="submit" class="btn">S'abonner</button>
+        </form>
+    </section>
 
+    <!-- Pied de page -->
     <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <div>
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="/menu/">Menu</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="/privacy/">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+                <div>
+                    
+                </div>
+                <div>
+                    <h4>Contactez-nous</h4>
+                    <ul>
+                        <li>2543 Rue Ontario E, Montréal</li>
+                        <li>+1 514-123-4567</li>
+                        <li>info@wawel.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <p>&copy; 2024 Wawel - Tous droits réservés</p>
     </footer>
 </body>
