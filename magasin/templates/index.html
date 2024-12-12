@@ -9,17 +9,7 @@
     <script src="{% static 'js/script.js' %}" defer></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="main-nav">
-        <img class="logo" src="{% static 'images/logo.png' %}" alt="Logo Wawel">
-
-        <ul>
-            <li><a href="/">Accueil</a></li>
-            <li><a href="/produits/">Menu</a></li>
-            <li><a href="/about/">À propos</a></li>
-            <li><a href="/contact/">Contact</a></li>
-        </ul>
-    </nav>
+    {% include './utils/nav.html' %}
 
     <!-- Section Héro -->
     <header class="hero">

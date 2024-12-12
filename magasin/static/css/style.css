@@ -17,48 +17,7 @@ header{
     padding-top: 120px;
     color: white;
 }
-nav{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
-}
-.logo{
-    width: 100px;
-    height: 100px;
-    padding: 0px;
-    object-fit: contain;
-    border-radius: 100%;
-    background-color: #ff9239;
-}
-nav ul{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 8px;
-    width: 100%;
-    max-width: 500px;
 
-}
-nav ul li{
-    list-style: none;
-}
-nav ul li a{
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
-    border-bottom: 1px rgba(255, 255, 255, 0) solid;
-    padding: 9px 10px;
-}
-nav ul li a:hover{
-    border-bottom: 1px white solid;
-}
 .hero-text{
     max-width: 1000px;
     width: 100%;
