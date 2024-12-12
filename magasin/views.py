@@ -4,9 +4,16 @@ def index(request):
     """
     Affiche la page d'accueil
     """
-    return render(request, 'index.html')
+    return render(request, 'index.html') # Page d'accueil
 
-# Vue pour la page de contact
+def about(request):
+    return render(request, 'about.html')  # Page À propos
+
+def menu(request):
+    return render(request, 'menu.html')  # Page Menu (si nécessaire)
+
+
 def contact(request):
-    return render(request, 'contact.html')
+    return render(request, 'contact.html') #page con
+
 

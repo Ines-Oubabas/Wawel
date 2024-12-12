@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-
 *{
     padding: 0;
     margin: 0;
@@ -16,8 +15,25 @@ header{
     background-size: cover;
     padding-top: 120px;
     color: white;
+    position: relative;
 }
-
+header .reseaux{
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.reseaux img{
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+}
+.reseaux img:hover{
+    transform: scale(1.35);
+}
 .hero-text{
     max-width: 1000px;
     width: 100%;
@@ -70,8 +86,8 @@ header{
     padding: 40px;
     text-align: center;
     color: #fff;
-    margin: 20px 0;
-    background: linear-gradient(to bottom, rgb(255, 0, 0), rgb(255, 174, 0));
+    margin: 0;
+    background: linear-gradient(to bottom, rgb(110, 18, 18), rgba(255, 175, 4, 0.74));
     background-size: 300% 300%;
     animation: gradientMove 6s ease infinite;
 }
@@ -87,8 +103,8 @@ header{
 }
 
 .promo .btn {
-    background-color: #ffdd00;
-    color: #000000;
+    background-color: red;
+    color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -111,4 +127,216 @@ header{
     100% {
         background-position: 0% 0%;
     }
+}
+
+/* Boutique */
+.store {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    margin: 0; /* Suppression des marges */
+}
+
+.store h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #800000;
+}
+
+.store p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.store .categories {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: auto;
+    width: 100%;
+}
+
+
+.store .category img {
+    width: 300px;
+    height: 250px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    box-shadow: 0 0 15px 0 #00000062;
+    border-radius: 12px;
+}
+
+.store .category p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* À propos */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    margin: 0;
+
+}
+
+.about-content {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    color: #800000;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.about-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.about-content .btn:hover {
+    background-color: #e62222;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+/* Newsletter */
+.newsletter {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    margin: 0;
+    border-top: none;
+}
+
+.newsletter h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #800000;
+}
+
+.newsletter p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    width: 60%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.newsletter button:hover {
+    background-color: #e62222;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+footer ul li {
+    margin: 5px 0;
+}
+
+footer ul li a {
+    color: #b9940b;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer ul li a:hover {
+    color: white;
+}
+
+.newslet {
+    display: flex;
+    align-items: end;
+    gap: 15px;
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+
+}
+
+.newslet iframe{
+    flex-basis: 250px;
+    flex-grow: 1;
+
+}
+.newslet form{
+    flex-basis: 300px;
+    flex-grow: 1;
+}
+
+.footer-links{
+    display: flex;
+    gap: 150px;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 30px 10px;
+    justify-content: center;
 }

@@ -3,18 +3,31 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #fff;
 }
-
+main{
+    background-image: url(../images/pain.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
+    margin-top: 50px;
+}
 /* Header */
 header {
-    background-color: #800000;
-    padding: 1rem 2rem;
+    padding: 100px 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header .logo {
@@ -34,44 +47,33 @@ header nav ul li a {
     color: #fff;
     font-weight: bold;
     font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    text-decoration: underline;
+    color: #e6c756;
 }
 
 /* Contact Header Section */
-.contact-header {
-    text-align: center;
-    background-color: #e6c756;
-    padding: 2rem 1rem;
-    color: #800000;
-}
-
-.contact-header h1 {
-    font-size: 2.5rem;
-    margin: 0;
-}
-
-.contact-header p {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-}
 
 /* Form Section */
 .contact-form-section {
-    padding: 2rem;
+    padding: 3rem 1rem;
+    max-width: 800px;
+    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .form-container {
     max-width: 600px;
     width: 100%;
-    background-color: #f9f9f9;
+    background: rgba(255, 255, 255, 0.8);
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
 }
 
 .form-group {
@@ -80,25 +82,34 @@ header nav ul li a:hover {
 
 .form-group label {
     display: block;
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
     color: #800000;
+    font-weight: bold;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 0.8rem;
+    padding: 1rem;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 1rem;
     color: #333;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: #800000;
+    box-shadow: 0px 4px 8px rgba(128, 0, 0, 0.3);
     outline: none;
+}
+
+textarea {
+    resize: none;
+    height: 150px;
 }
 
 .btn-submit {
@@ -106,22 +117,23 @@ header nav ul li a:hover {
     color: #fff;
     padding: 0.8rem 1.5rem;
     border: none;
-    border-radius: 5px;
-    font-size: 1rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-submit:hover {
     background-color: #660000;
+    transform: scale(1.05);
 }
 
 /* Footer */
 footer {
-    background-color: #800000;
+    background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
+    padding: 50px 0;
+    font-size: 0.9rem;
 }

@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Wawel</title>
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+</head>
+<body>
+    {% include './utils/nav.html' %}
+    <main>
+        <!-- Section héro -->
+        <section class="hero">
+            <div class="overlay">
+                <h1>À propos</h1>
+                <p>La boulangerie au bon pain vous sert depuis 1978.</p>
+            </div>
+        </section>
+
+        <!-- Section "Qui nous sommes" -->
+        <section class="about-us">
+            <div class="about-images">
+                <img src="{% static 'images/bread-floating.jpg' %}" alt="Pain en lévitation">
+                <img src="{% static 'images/baker.jpg' %}" alt="Pâtissière">
+            </div>
+            <div class="about-text">
+                <h2>Qui nous sommes ?</h2>
+                <p>Depuis plus de 40 ans, Wawel se consacre à offrir des pains et pâtisseries artisanaux de qualité supérieure.</p>
+                <p>Quand un boulanger passionné rencontre une pâtissière talentueuse, la magie opère pour créer des moments inoubliables.</p>
+            </div>
+        </section>
+
+        <!-- Section "Notre histoire" -->
+        <section class="our-history">
+            <h2>Notre histoire</h2>
+            <p>Depuis 1978</p>
+            <div class="timeline">
+                <div class="event">
+                    <p>Ouverture de la première boulangerie Wawel à Paris.</p>
+                    <span>15 mai 1978</span>
+                </div>
+                <div class="event">
+                    <p>Introduction des pâtisseries artisanales.</p>
+                    <span>22 avril 1990</span>
+                </div>
+                <div class="event">
+                    <p>Expansion à travers toute la France.</p>
+                    <span>Août 2003</span>
+                </div>
+                <div class="event">
+                    <p>Lancement de notre boutique en ligne.</p>
+                    <span>1er janvier 2023</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section "Toujours bien cuit" -->
+        <section class="always-baked">
+            <div class="image">
+                <img src="{% static 'images/bread-slices.jpg' %}" alt="Tranches de pain">
+            </div>
+            <div class="text">
+                <h2>Toujours bien cuit</h2>
+                <p>Chez Wawel, chaque pain est cuit à la perfection, avec une attention aux détails qui fait toute la différence.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Wawel - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

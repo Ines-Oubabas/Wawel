@@ -14,36 +14,50 @@
     <!-- Section Héro -->
     <header class="hero">
         <div class="hero-text">
-            <span>Since 2015</span>
+            <span>Depuis 2015</span>
             <h1>Le gâteau parfait, chaque jour !</h1>
             <h4>Des gâteaux et pâtisseries faits à la main, préparés avec amour et tradition.</h4>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit veritatis vero officiis, officia necessitatibus consequatur omnis! Molestias adipisci corporis nihil optio sed. Aliquam aperiam cumque ut ipsum, recusandae impedit corrupti.</p>
+            <p>Découvrez nos créations uniques qui allient tradition et modernité pour offrir à chaque bouchée un moment de pur bonheur.</p>
             <div class="btns">
-                <a href="/">S'inscrire</a>
-                <a href="/">En savoir plus</a>
+                <a href="/inscription/">S'inscrire</a>
+                <a href="/about/">En savoir plus</a>
             </div>
         </div>
+        <!-- Réseaux sociaux -->
+    <div class="reseaux">
+        <hr style="width: 40px;">
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="{% static 'images/instagram-icon.png' %}" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="{% static 'images/facebook-icon.png' %}" alt="Facebook">
+        </a>
+        <a href="https://wa.me/1234567890" target="_blank">
+            <img src="{% static 'images/whatsapp-icon.png' %}" alt="WhatsApp">
+        </a>
+        <hr style="width: 40px;">
+    </div>
     </header>
 
     <!-- Section Boutique -->
     <section class="store">
         <h2>Bienvenue dans notre boutique</h2>
-        <p>Découvrez notre large gamme de gâteaux faits maison, cookies, sandwiches, et bien plus encore !</p>
+        <p>Explorez notre large choix de gâteaux, cookies, sandwichs et bien plus encore, tous faits maison !</p>
         <div class="categories">
             <div class="category">
-                <img src="{% static 'images/cake-icon.png' %}" alt="Gâteau">
+                <img src="{% static 'images/cake.png' %}" alt="Gâteau">
                 <p>Gâteaux</p>
             </div>
             <div class="category">
-                <img src="{% static 'images/sandwich-icon.png' %}" alt="Sandwich">
+                <img src="{% static 'images/sandwich.png' %}" alt="Sandwich">
                 <p>Sandwichs</p>
             </div>
             <div class="category">
-                <img src="{% static 'images/cookie-icon.png' %}" alt="Cookie">
+                <img src="{% static 'images/cookie.png' %}" alt="Cookie">
                 <p>Cookies</p>
             </div>
             <div class="category">
-                <img src="{% static 'images/bread-icon.png' %}" alt="Pain">
+                <img src="{% static 'images/bread.png' %}" alt="Pain">
                 <p>Pains</p>
             </div>
         </div>
@@ -51,31 +65,43 @@
 
     <!-- Section À propos -->
     <section class="about">
-        <div class="about-content">
-            <h2>À propos de Wawel</h2>
-            <p>Depuis plus de 20 ans, Wawel prépare des produits de boulangerie et pâtisserie délicieux, rendant chaque moment spécial pour nos clients.</p>
-            <a href="/about/" class="btn">En savoir plus</a>
-        </div>
-        <div class="about-image">
-            <img src="{% static 'images/about.jpg' %}" alt="À propos de Wawel">
+        <div class="bout-content">
+            <div class="about-image">
+                <img src="{% static 'images/about.jpg' %}" alt="À propos de Wawel">
+            </div>
+            <div>
+                <h2>À propos de Wawel</h2>
+                <p>Depuis plus de 20 ans, Wawel réinvente la boulangerie en mêlant tradition et innovation pour satisfaire toutes vos envies gourmandes.</p>
+                <a href="/about/" class="btn">En savoir plus</a>
+
+            </div>
         </div>
     </section>
 
     <!-- Section Promotion -->
     <section class="promo">
         <h2>Offre spéciale du mois</h2>
-        <p>Profitez de notre offre exclusive et économisez sur vos achats ! -20% sur tous nos gâteaux pendant ce mois de décembre.</p>
-        <a href="/promo" class="btn">Voir l'offre</a>
+        <p>Profitez de -10% sur tous nos gâteaux ce mois-ci ! Une exclusivité à ne pas manquer.</p>
+        <a href="/contact/" class="btn">s'inscire</a>
     </section>
 
     <!-- Section Newsletter -->
     <section class="newsletter">
         <h2>Abonnez-vous à notre Newsletter</h2>
-        <p>Recevez les dernières actualités et des offres exclusives directement dans votre boîte mail.</p>
+        <p>Ne manquez pas nos nouveautés et nos offres exclusives directement dans votre boîte mail.</p>
+        <div class='newslet'>
         <form action="#" method="POST" class="newsletter-form">
             <input type="email" name="email" placeholder="Entrez votre email" required>
             <button type="submit" class="btn">S'abonner</button>
         </form>
+        <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.6334571182034!2d-73.56725668444739!3d45.51613617910144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a3a0a7df4f3%3A0x3e0a7b2e0e7d4e20!2s2543%20Rue%20Ontario%20E%2C%20Montréal%2C%20QC%20H2K%201W5%2C%20Canada!5e0!3m2!1sen!2sca!4v1690000000000" 
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"></iframe>
+    </div>
     </section>
 
     <!-- Pied de page -->
@@ -89,9 +115,6 @@
                         <li><a href="/contact/">Contact</a></li>
                         <li><a href="/privacy/">Politique de confidentialité</a></li>
                     </ul>
-                </div>
-                <div>
-                    
                 </div>
                 <div>
                     <h4>Contactez-nous</h4>
