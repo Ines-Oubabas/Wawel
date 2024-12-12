@@ -34,7 +34,7 @@ header nav ul li a {
 
 header nav ul li a:hover,
 header nav ul li a.active {
-    color: #c79e65;
+    color: #f0ce9f;
 }
 
 /* Section héro */
@@ -43,38 +43,42 @@ header nav ul li a.active {
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 125px 2rem;
+    padding: 150px 20px;
     color: #fff;
     position: relative;
 }
 
 .hero .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 2rem;
-    border-radius: 10px;
+    background-color: rgba(75, 72, 72, 0.6);
+    padding: 50px;
+    border-radius: 15px;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin: 0;
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    color: #800000;
+    font-weight: bold;
 }
 
 .hero p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    margin: 0;
 }
 
 /* Section "Qui nous sommes" */
 .about-us {
     display: flex;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 30px;
+    padding: 60px 20px;
     align-items: center;
+    background-color: #fff5e6;
 }
 
 .about-images img {
     width: 45%;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .about-text {
@@ -82,75 +86,75 @@ header nav ul li a.active {
 }
 
 .about-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #c79e65;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: #800000;
 }
 
 .about-text p {
     font-size: 1.2rem;
     line-height: 1.8;
+    margin-bottom: 15px;
 }
+
 
 /* Section "Notre histoire" */
 .our-history {
     text-align: center;
-    padding: 2rem;
-    background-color: #fff;
-    margin: 2rem 0;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #eed57b, #791d08);
+    color: #800000;
 }
 
 .our-history h2 {
-    font-size: 2.5rem;
-    color: #c79e65;
-    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
-.timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.timeline .event {
-    background-color: #f9f5f0;
-    border-left: 4px solid #c79e65;
-    padding: 1rem;
+.our-history .timeline .event {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
     position: relative;
-}
-
-.timeline .event span {
-    font-size: 1rem;
-    color: #888;
-    position: absolute;
-    top: 0.5rem;
-    right: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Section "Toujours bien cuit" */
 .always-baked {
     display: flex;
-    gap: 2rem;
+    gap: 30px;
     align-items: center;
-    padding: 2rem;
+    padding: 60px 20px;
     background-color: #fff;
 }
 
 .always-baked .image img {
     width: 50%;
-    border-radius: 10px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .always-baked .text {
-    text-align: center;
+    text-align: left;
 }
 
 .always-baked .text h2 {
-    font-size: 2.5rem;
-    color: #c79e65;
+    font-size: 2.8rem;
+    color: #800000;
 }
 
 .always-baked .text p {
     font-size: 1.2rem;
     line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    font-size: 0.9rem;
 }
