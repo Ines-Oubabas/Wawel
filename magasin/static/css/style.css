@@ -73,9 +73,14 @@ header .reseaux{
     text-decoration: none;
     background-color: red;
     padding: 16px 24px;
-    border-radius: 15px;
+    border-radius: 550px;
     box-shadow: 0px 6px 20px 2px rgba(0, 0, 0, 0.15);
     transition: 0.3s;
+}
+.hero-text .btns a:nth-child(2){
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
 }
 .hero-text .btns a:hover{
     padding: 16px 38px;
@@ -132,7 +137,7 @@ header .reseaux{
 /* Boutique */
 .store {
     text-align: center;
-    padding: 60px 20px;
+    padding: 60px 20px 0;
     background-color: #f9f9f9;
     margin: 0; /* Suppression des marges */
 }
@@ -167,8 +172,13 @@ header .reseaux{
     object-fit: cover;
     box-shadow: 0 0 15px 0 #00000062;
     border-radius: 12px;
+    outline: 3px solid transparent;
+    outline-offset: 8px;
+    transition: 0.3s;
 }
-
+.store .category img:hover{
+    outline: 3px solid red;
+}
 .store .category p {
     font-size: 1.1rem;
     color: #333;
@@ -178,7 +188,7 @@ header .reseaux{
 .about {
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
     padding: 60px 20px;
     background-color: #f9f9f9;
     margin: 0;
@@ -188,12 +198,17 @@ header .reseaux{
 .about-content {
     padding: 20px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    
-
+    align-items: end;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1300px;
+    width: 100%;
+    margin: 50px 0;
 }
-
+.about-content .infos{
+    flex-basis: 325px;
+    flex-grow: 1;
+}
 .about-content h2 {
     font-size: 2.5rem;
     color: #800000;
@@ -221,7 +236,8 @@ header .reseaux{
 }
 
 .about-image {
-    flex: 1;
+    flex-basis: 350px;
+    flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -331,7 +347,9 @@ footer ul li a:hover {
     flex-basis: 300px;
     flex-grow: 1;
 }
-
+.newslet form input{
+    background-color: #e670223d;
+}
 .footer-links{
     display: flex;
     gap: 150px;
