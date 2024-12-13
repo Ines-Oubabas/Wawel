@@ -1,135 +1,182 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accueil - Wawel</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <script src="{% static 'js/script.js' %}" defer></script>
-</head>
-<body>
+  </head>
+
+  <body>
     {% include './utils/nav.html' %}
 
     <!-- Section Héro -->
     <header class="hero">
-        <div class="hero-text">
-            <span>Depuis 2015</span>
-            <h1>Le gâteau parfait, chaque jour !</h1>
-            <h4>Des gâteaux et pâtisseries faits à la main, préparés avec amour et tradition.</h4>
-            <p>Découvrez nos créations uniques qui allient tradition et modernité pour offrir à chaque bouchée un moment de pur bonheur.</p>
-            <div class="btns">
-                <a href="/contact/">S'inscrire</a>
-                <a href="/about/">En savoir plus</a>
-            </div>
+      <div class="hero-text">
+        <span>Depuis 2015</span>
+        <h1>Le gâteau parfait, chaque jour !</h1>
+        <h4
+          >Des créations artisanales, préparées avec amour et savoir-faire.</h4
+        >
+        <p
+          >Des gâteaux et pâtisseries qui marient tradition et innovation pour
+          une expérience gourmande inoubliable.</p
+        >
+        <div class="btns">
+          <a href="/contact/">Rejoignez-nous</a>
+          <a href="/about/">Découvrez notre histoire</a>
         </div>
-        <!-- Réseaux sociaux -->
-    <div class="reseaux">
-        <hr style="width: 40px;">
+      </div>
+      <!-- Réseaux sociaux -->
+      <div class="reseaux">
+        <hr style="width: 40px" />
         <a href="https://www.instagram.com" target="_blank">
-            <img src="{% static 'images/instagram-icon.png' %}" alt="Instagram">
+          <img src="{% static 'images/instagram-icon.png' %}" alt="Instagram" />
         </a>
         <a href="https://www.facebook.com" target="_blank">
-            <img src="{% static 'images/facebook-icon.png' %}" alt="Facebook">
+          <img src="{% static 'images/facebook-icon.png' %}" alt="Facebook" />
         </a>
         <a href="https://wa.me/1234567890" target="_blank">
-            <img src="{% static 'images/whatsapp-icon.png' %}" alt="WhatsApp">
+          <img src="{% static 'images/whatsapp-icon.png' %}" style="height: 28px; width: 28px;" alt="WhatsApp" />
         </a>
-        <hr style="width: 40px;">
-    </div>
+        <hr style="width: 40px" />
+      </div>
     </header>
 
     <!-- Section Boutique -->
     <section class="store">
-        <h2>Bienvenue dans notre boutique</h2>
-        <p>Explorez notre large choix de gâteaux, cookies, sandwichs et bien plus encore, tous faits maison !</p>
-        <div class="categories">
-            <div class="category">
-                <img src="{% static 'images/cake.png' %}" alt="Gâteau">
-                <p>Gâteaux</p>
-            </div>
-            <div class="category">
-                <img src="{% static 'images/sandwich.png' %}" alt="Sandwich">
-                <p>Sandwichs</p>
-            </div>
-            <div class="category">
-                <img src="{% static 'images/cookie.png' %}" alt="Cookie">
-                <p>Cookies</p>
-            </div>
-            <div class="category">
-                <img src="{% static 'images/bread.png' %}" alt="Pain">
-                <p>Pains</p>
-            </div>
+      <h2>Découvrez notre boutique</h2>
+      <p
+        >Explorez notre sélection de gâteaux, cookies, sandwichs et bien plus
+        encore, tous préparés avec passion !</p
+      >
+      <div class="categories">
+        <div class="category">
+          <img src="{% static 'images/cake.png' %}" alt="Gâteau" />
+          <p style="color: brown;">Gâteaux</p>
         </div>
+        <div class="category">
+          <img src="{% static 'images/sandwich.png' %}" alt="Sandwich" />
+          <p style="color: brown;">Sandwichs</p>
+        </div>
+        <div class="category">
+          <img src="{% static 'images/cookie.png' %}" alt="Cookie" />
+          <p style="color: brown;">Cookies</p>
+        </div>
+        <div class="category">
+          <img src="{% static 'images/bread.png' %}" alt="Pain" />
+          <p style="color: brown;">Pains</p>
+        </div>
+      </div>
     </section>
 
     <!-- Section À propos -->
     <section class="about">
-        <div class="about-content">
-            <!-- Texte de la section -->
-            <div class="about-text">
-                <h2>À propos de Wawel</h2>
-                <p>Depuis plus de 20 ans, Wawel réinvente la boulangerie en mêlant tradition et innovation pour satisfaire toutes vos envies gourmandes.</p>
-                <p>Chez Wawel, chaque création est un mélange parfait de passion, de qualité et d’artisanat, conçu pour rendre vos moments encore plus spéciaux.</p>
-                <a href="/about/" class="btn">En savoir plus</a>
-            </div>
-            <!-- Image associée -->
-            <div class="about-image">
-                <img src="{% static 'images/about.jpg' %}" alt="À propos de Wawel">
-            </div>
+      <div class="about-content">
+        <div class="about-image">
+          <img src="{% static 'images/about.jpg' %}" alt="À propos de Wawel" />
         </div>
+        <div class="infos">
+          <h2>À propos de Wawel</h2>
+          <p
+            >Depuis plus de 20 ans, Wawel redéfinit l'art de la boulangerie en
+            alliant héritage artisanal et créativité moderne, pour offrir des
+            saveurs uniques et raffinées.</p
+          >
+          <p
+            >Notre passion pour la qualité se reflète dans chaque création. Que
+            ce soit un gâteau classique ou une pâtisserie innovante, chaque
+            produit est confectionné avec soin et amour.</p
+          >
+          <a href="/about/" class="btn">En savoir plus</a>
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="infos">
+          <h2>Notre Engagement</h2>
+          <p
+            >Chez Wawel, nous privilégions les ingrédients locaux et de saison
+            pour garantir la fraîcheur et la qualité. Nous croyons que chaque
+            bouchée doit être un moment de plaisir.</p
+          >
+          <p
+            >Notre équipe dévouée travaille chaque jour pour vous offrir une
+            expérience gourmande qui combine l'authenticité et l'innovation.
+            Rejoignez-nous et découvrez un univers de saveurs
+            exceptionnelles.</p
+          >
+          <a href="/about/" class="btn">En savoir plus</a>
+        </div>
+        <div class="about-image">
+          <img src="{% static 'images/about.jpg' %}" alt="À propos de Wawel" />
+        </div>
+      </div>
     </section>
     
 
     <!-- Section Promotion -->
     <section class="promo">
-        <h2>Offre spéciale du mois</h2>
-        <p>Profitez de -10% sur tous nos gâteaux ce mois-ci ! Une exclusivité à ne pas manquer.</p>
-        <a href="/contact/" class="btn">s'inscire</a>
+      <h2>Offre spéciale du mois</h2>
+      <p
+        >Profitez de -10% sur tous nos gâteaux ce mois-ci ! Une offre à ne pas
+        manquer pour découvrir nos créations uniques.</p
+      >
+      <a href="/contact/" class="btn">Rejoignez-nous maintenant</a>
     </section>
 
     <!-- Section Newsletter -->
     <section class="newsletter">
-        <h2>Abonnez-vous à notre Newsletter</h2>
-        <p>Ne manquez pas nos nouveautés et nos offres exclusives directement dans votre boîte mail.</p>
-        <div class='newslet'>
+      <h2>Abonnez-vous à notre Newsletter</h2>
+      <p
+        >Ne manquez aucune de nos nouvelles créations et offres exclusives !
+        Inscrivez-vous et restez informé.</p
+      >
+      <div class="newslet">
         <form action="#" method="POST" class="newsletter-form">
-            <input type="email" name="email" placeholder="Entrez votre email" required>
-            <button type="submit" class="btn">S'abonner</button>
+          <input
+            type="email"
+            name="email"
+            placeholder="Entrez votre email"
+            required
+          />
+          <button type="submit" class="btn">S'abonner</button>
         </form>
-        <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.6334571182034!2d-73.56725668444739!3d45.51613617910144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a3a0a7df4f3%3A0x3e0a7b2e0e7d4e20!2s2543%20Rue%20Ontario%20E%2C%20Montréal%2C%20QC%20H2K%201W5%2C%20Canada!5e0!3m2!1sen!2sca!4v1690000000000" 
-                width="100%" 
-                height="300" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy"></iframe>
-    </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.6334571182034!2d-73.56725668444739!3d45.51613617910144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a3a0a7df4f3%3A0x3e0a7b2e0e7d4e20!2s2543%20Rue%20Ontario%20E%2C%20Montréal%2C%20QC%20H2K%201W5%2C%20Canada!5e0!3m2!1sen!2sca!4v1690000000000"
+          width="100%"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
     </section>
 
     <!-- Pied de page -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <div>
-                    <h4>Ressources</h4>
-                    <ul>
-                        <li><a href="/menu/">Menu</a></li>
-                        <li><a href="/contact/">Contact</a></li>
-                        <li><a href="/privacy/">Politique de confidentialité</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Contactez-nous</h4>
-                    <ul>
-                        <li>2543 Rue Ontario E, Montréal</li>
-                        <li>+1 514-123-4567</li>
-                        <li>info@wawel.com</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="footer-content">
+        <div class="footer-links">
+          <div>
+            <h4>Ressources</h4>
+            <ul>
+              <li><a href="/menu/">Menu</a></li>
+              <li><a href="/contact/">Contact</a></li>
+              <li><a href="/privacy/">Politique de confidentialité</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contactez-nous</h4>
+            <ul>
+              <li>2543 Rue Ontario E, Montréal</li>
+              <li>+1 514-123-4567</li>
+              <li>info@wawel.com</li>
+            </ul>
+          </div>
         </div>
-        <p>&copy; 2024 Wawel - Tous droits réservés</p>
+      </div>
+      <p>&copy; 2024 Wawel - Tous droits réservés</p>
     </footer>
-</body>
+  </body>
 </html>
