@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Produits</title>
+    <link rel="stylesheet" href="{% static 'css/produits.css' %}">
+</head>
+<body>
+    {% include './utils/nav.html' %}
+    <header>
+        <h1 class="page-title">Nos Produits</h1>
+    </header>
+
+    <!-- Boulangerie Pâtisserie -->
+    <section class="product-category">
+        <h2>Boulangerie Pâtisserie</h2>
+
+        <!-- Pain -->
+        <div class="subcategory">
+            <h3>PAIN</h3>
+            <div class="product-card">
+                <img src="{% static 'images/pain-seigle.jpg' %}" alt="Pain de seigle">
+                <h4><strong>Pain de seigle</strong></h4>
+                <p><strong>Code :</strong> CHZ</p>
+                <p>Farine de blé, farine de seigle, eau, sel, levure, grains de pavot.</p>
+            </div>
+        </div>
+
+        <!-- Viennoiseries -->
+        <div class="subcategory">
+            <h3>VIENNOISERIES</h3>
+            <div class="product-card">
+                <img src="{% static 'images/croissant.jpg' %}" alt="Croissant">
+                <h4><strong>Croissant</strong></h4>
+                <p><strong>Code :</strong> Croissant</p>
+                <p>Farine, beurre, levure, sucre, sel.</p>
+            </div>
+        </div>
+
+        <!-- Format Familial -->
+        <div class="subcategory">
+            <h3>FORMAT FAMILIAL</h3>
+            <div class="product-card">
+                <img src="{% static 'images/strudel.jpg' %}" alt="Strudel">
+                <h4><strong>Strudel aux pommes</strong></h4>
+                <p><strong>Code :</strong> SAP</p>
+                <p>Farine, beurre, matière grasse, pommes, sucre, oeufs.</p>
+            </div>
+        </div>
+
+        <!-- Format Individuel -->
+        <div class="subcategory">
+            <h3>FORMAT INDIVIDUEL</h3>
+            <div class="product-card">
+                <img src="{% static 'images/eclair.jpg' %}" alt="Eclair">
+                <h4><strong>Eclair</strong></h4>
+                <p><strong>Code :</strong> ECL</p>
+                <p>Farine, beurre, sucre, chocolat, oeufs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Salés -->
+    <section class="product-category">
+        <h2>Salés</h2>
+        <div class="subcategory">
+            <h3>Sandwichs</h3>
+            <div class="product-card">
+                <img src="{% static 'images/sandwich.jpg' %}" alt="Sandwich classique">
+                <h4><strong>Sandwich classique</strong></h4>
+                <p>Jambon, fromage, salade, pain baguette croustillant.</p>
+            </div>
+        </div>
+
+        <div class="subcategory">
+            <h3>Salades</h3>
+            <div class="product-card">
+                <img src="{% static 'images/salade.jpg' %}" alt="Salade fraîche">
+                <h4><strong>Salade fraîche</strong></h4>
+                <p>Tomates, laitue, vinaigrette maison.</p>
+            </div>
+        </div>
+
+        <div class="subcategory">
+            <h3>Soupes</h3>
+            <div class="product-card">
+                <img src="{% static 'images/soupe.jpg' %}" alt="Soupe maison">
+                <h4><strong>Soupe maison</strong></h4>
+                <p>Potiron, carottes, herbes fraîches.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Charcuteries -->
+    <section class="product-category">
+        <h2>Charcuteries</h2>
+        <div class="subcategory">
+            <div class="product-card">
+                <img src="{% static 'images/jambon.jpg' %}" alt="Jambon fumé">
+                <h4><strong>Jambon fumé</strong></h4>
+                <p>Jambon artisanal fumé aux épices.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Autres -->
+    <section class="product-category">
+        <h2>Autres</h2>
+        <div class="subcategory">
+            <div class="product-card">
+                <img src="{% static 'images/divers.jpg' %}" alt="Produits Divers">
+                <h4><strong>Produits Divers</strong></h4>
+                <p>Découvrez nos autres produits gourmands.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>&copy; 2024 Wawel - Tous droits réservés.</footer>
+</body>
+</html>
