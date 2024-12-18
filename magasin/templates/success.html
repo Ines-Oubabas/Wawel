@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Envoyé - Wawel</title>
+    <link rel="stylesheet" href="{% static 'css/success.css' %}">
+</head>
+<body>
+    <div class="success-container">
+        <!-- Icône de confirmation -->
+        <div class="icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/4315/4315445.png" alt="Tick Icon">
+        </div>
+
+        <!-- Message de confirmation personnalisé -->
+        <h1>Merci, {{ first_name }} !</h1>
+        <p>Votre message a été envoyé avec succès. Nous vous répondrons dès que possible.</p>
+
+        <!-- Bouton pour revenir à l'accueil -->
+        <a href="{% url 'index' %}" class="btn">Retour à l'accueil</a>
+    </div>
+</body>
+</html>

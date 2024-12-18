@@ -12,29 +12,39 @@
 
     <!-- Contact Header -->
     <main>
-    <h1> Contactez-nous </h1>
+      <h1>Contactez-nous</h1>
+
+      <!-- Messages de retour utilisateur -->
+      {% if messages %}
+      <div class="messages">
+        {% for message in messages %}
+        <p class="{{ message.tags }}">{{ message }}</p>
+        {% endfor %}
+      </div>
+      {% endif %}
 
       <!-- Contact Form -->
       <section class="contact-form-section">
-        
         <div class="form-container">
-          <form action="/submit-contact/" method="POST">
+          <!-- Formulaire avec action vers submit_contact -->
+          <form method="POST" action="{% url 'submit_contact' %}">
+            {% csrf_token %}
             <div class="form-group">
-              <label for="prenom">Prénom :</label>
+              <label for="first_name">Prénom :</label>
               <input
                 type="text"
-                id="prenom"
-                name="prenom"
+                id="first_name"
+                name="first_name"
                 placeholder="Votre prénom"
                 required
               />
             </div>
             <div class="form-group">
-              <label for="nom">Nom :</label>
+              <label for="last_name">Nom :</label>
               <input
                 type="text"
-                id="nom"
-                name="nom"
+                id="last_name"
+                name="last_name"
                 placeholder="Votre nom"
                 required
               />
@@ -63,6 +73,7 @@
         </div>
       </section>
     </main>
+
     <!-- Footer -->
     <footer>&copy; 2024 Wawel - Tous droits réservés.</footer>
   </body>

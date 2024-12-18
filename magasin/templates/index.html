@@ -116,25 +116,51 @@
     </section>
     
 
-    <!-- Section Promotion -->
-    <section class="promo">
-      <h2>Offre spéciale du mois</h2>
-      <p
-        >Profitez de -10% sur tous nos gâteaux ce mois-ci ! Une offre à ne pas
-        manquer pour découvrir nos créations uniques.</p
-      >
-      <a href="/contact/" class="btn">Rejoignez-nous maintenant</a>
-    </section>
+    <!-- Section Promotion Dynamique -->
+    {% if promotions %}
+<section class="promo">
+    <h2>Nos Promotions</h2>
+    {% for promo in promotions %}
+        {% if promo.is_active %}
+            <div class="promo-content">
+                <h3>{{ promo.title }}</h3>
+                <p>{{ promo.description }}</p>
+                <p>
+                    <strong>Valable du {{ promo.formatted_start_date }} au {{ promo.formatted_end_date }}</strong>
+                </p>
+            </div>
+        {% endif %}
+    {% endfor %}
+    <a href="/contact/" class="btn">Profitez de l'offre</a>
+</section>
+{% else %}
+<section class="promo">
+    <h2>Nos Promotions</h2>
+    <p>Pas de promotions en cours actuellement. Revenez bientôt pour nos offres spéciales !</p>
+</section>
+{% endif %}
 
-    <!-- Section Newsletter -->
+    
+ <!-- Section Newsletter -->
     <section class="newsletter">
       <h2>Abonnez-vous à notre Newsletter</h2>
-      <p
-        >Ne manquez aucune de nos nouvelles créations et offres exclusives !
-        Inscrivez-vous et restez informé.</p
-      >
+      <p>
+        Ne manquez aucune de nos nouvelles créations et offres exclusives ! Inscrivez-vous et restez informé.
+      </p>
+
+      <!-- Affichage des messages de confirmation et d'erreur -->
+      {% if messages %}
+      <div class="messages">
+        {% for message in messages %}
+        <div class="{{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <!-- Formulaire pour la newsletter -->
       <div class="newslet">
-        <form action="#" method="POST" class="newsletter-form">
+        <form action="{% url 'newsletter' %}" method="POST" class="newsletter-form">
+          {% csrf_token %}
           <input
             type="email"
             name="email"
@@ -143,6 +169,8 @@
           />
           <button type="submit" class="btn">S'abonner</button>
         </form>
+
+        <!-- Carte Google Maps -->
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.6334571182034!2d-73.56725668444739!3d45.51613617910144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a3a0a7df4f3%3A0x3e0a7b2e0e7d4e20!2s2543%20Rue%20Ontario%20E%2C%20Montréal%2C%20QC%20H2K%201W5%2C%20Canada!5e0!3m2!1sen!2sca!4v1690000000000"
           width="100%"
@@ -153,6 +181,7 @@
         ></iframe>
       </div>
     </section>
+
 
     <!-- Pied de page -->
     <footer>
