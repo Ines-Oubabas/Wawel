@@ -9,7 +9,7 @@ from django.utils import timezone
 from .models import Newsletter
 from .models import NewsletterSubscriber
 from .forms import ProduitForm, PromotionForm # Importation des formulaires nécessaires
-
+from django.conf import settings
 # Page d'accueil
 def index(request):
     """
@@ -59,8 +59,8 @@ def contact(request):
         send_mail(
             subject=f"Message de {nom}",
             message=message,
-            from_email=email,
-            recipient_list=['wawel.boulangerie@gmail.com'],  # Remplacer par l'email du magasin
+            from_email=settings.DEFAULT_FROM_EMAIL, # Utilisation de la configuration sécurisée
+            recipient_list=[settings.EMAIL_HOST_USER], # Email configuré dans .env
             fail_silently=False,
         )
         return HttpResponse("Message envoyé avec succès !")
@@ -103,8 +103,8 @@ def submit_contact(request):
             email_message = EmailMessage(
                 subject=subject,
                 body=message,
-                from_email='wawel.boulangerie@gmail.com',  # Email professionnel
-                to=['wawel.boulangerie@gmail.com'],       # Email de réception
+                from_email=settings.DEFAULT_FROM_EMAIL,  # Email sécurisé depuis .env
+                to=[settings.EMAIL_HOST_USER],           # Email configuré dans .env
                 reply_to=[email]                         # L'email du client pour répondre directement
             )
             email_message.send(fail_silently=False)

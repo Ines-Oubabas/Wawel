@@ -80,3 +80,6 @@ secrets.json
 .tox/
 .coverage
 *.coverage
+
+# Ignorer le fichier .env
+.env
