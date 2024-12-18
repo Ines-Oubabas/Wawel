@@ -1,12 +1,13 @@
 /* Styles généraux */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #f9f5f0;
+    background-color: #b42d04;
 }
 
+/* Header */
 header nav {
     display: flex;
     justify-content: space-between;
@@ -29,12 +30,12 @@ header nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s ease-in-out;
 }
 
 header nav ul li a:hover,
 header nav ul li a.active {
-    color: #f0ce9f;
+    color: #5a0000;
 }
 
 /* Section héro */
@@ -44,21 +45,23 @@ header nav ul li a.active {
     background-position: center;
     text-align: center;
     padding: 150px 20px;
-    color: #fff;
     position: relative;
+    color: #fff;
 }
 
 .hero .overlay {
-    background-color: rgba(75, 72, 72, 0.6);
-    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 60px;
     border-radius: 15px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 15px;
-    color: #800000;
+    font-size: 4rem;
     font-weight: bold;
+    text-transform: uppercase;
+    color: #f0e68c;
+    margin-bottom: 15px;
 }
 
 .hero p {
@@ -70,13 +73,14 @@ header nav ul li a.active {
 .about-us {
     display: flex;
     gap: 30px;
-    padding: 60px 20px;
+    padding: 60px 10%;
     align-items: center;
-    background-color: #fff5e6;
+    background-color: #fff;
 }
 
 .about-images img {
-    width: 45%;
+    width: 100%;
+    max-width: 500px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -86,39 +90,57 @@ header nav ul li a.active {
 }
 
 .about-text h2 {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
-    color: #800000;
+    font-size: 3rem;
+    color: #e76f51;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.about-text h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #f4a261;
+    margin-top: 10px;
 }
 
 .about-text p {
     font-size: 1.2rem;
     line-height: 1.8;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
-
 
 /* Section "Notre histoire" */
 .our-history {
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(to bottom, #eed57b, #791d08);
-    color: #800000;
+    padding: 80px 10%;
+    background: linear-gradient(to bottom, #b42d04, #55423e);
+    color: #fff;
 }
 
 .our-history h2 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
+    font-size: 3rem;
     font-weight: bold;
+    margin-bottom: 30px;
 }
 
 .our-history .timeline .event {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #fff;
     border-radius: 10px;
+    color: #333;
     padding: 20px;
     margin: 20px 0;
     position: relative;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.our-history .timeline .event span {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    color: #e76f51;
 }
 
 /* Section "Toujours bien cuit" */
@@ -126,23 +148,21 @@ header nav ul li a.active {
     display: flex;
     gap: 30px;
     align-items: center;
-    padding: 60px 20px;
-    background-color: #fff;
+    padding: 60px 10%;
+    background-color: #fdfaf6;
 }
 
 .always-baked .image img {
-    width: 50%;
+    width: 100%;
+    max-width: 500px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.always-baked .text {
-    text-align: left;
-}
-
 .always-baked .text h2 {
-    font-size: 2.8rem;
-    color: #800000;
+    font-size: 3rem;
+    color: #e76f51;
+    margin-bottom: 20px;
 }
 
 .always-baked .text p {
@@ -150,11 +170,34 @@ header nav ul li a.active {
     line-height: 1.8;
 }
 
+/* Effets d'animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Footer */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 50px 0;
-    font-size: 0.9rem;
+    padding: 20px 0;
+    font-size: 1rem;
 }
