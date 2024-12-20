@@ -48,29 +48,31 @@
     <!-- Section Boutique -->
     <section class="store">
       <h2>Découvrez notre boutique</h2>
-      <p
-        >Explorez notre sélection de gâteaux, cookies, sandwichs et bien plus
-        encore, tous préparés avec passion !</p
-      >
+      <p>
+        Explorez notre sélection de gâteaux, cookies, sandwichs et bien plus encore, tous préparés avec passion !
+      </p>
       <div class="categories">
-        <div class="category">
-          <img src="{% static 'images/cake.png' %}" alt="Gâteau" />
-          <p style="color: brown;">Gâteaux</p>
-        </div>
-        <div class="category">
-          <img src="{% static 'images/sandwich.png' %}" alt="Sandwich" />
-          <p style="color: brown;">Sandwichs</p>
-        </div>
-        <div class="category">
-          <img src="{% static 'images/cookie.png' %}" alt="Cookie" />
-          <p style="color: brown;">Cookies</p>
-        </div>
-        <div class="category">
-          <img src="{% static 'images/bread.png' %}" alt="Pain" />
-          <p style="color: brown;">Pains</p>
-        </div>
-      </div>
+        <a href="{% url 'produits' %}" class="category">
+            <img src="{% static 'images/cake.png' %}" alt="Gâteau" />
+            <p style="color: brown;">Gâteaux</p>
+        </a>
+        <a href="{% url 'produits' %}" class="category">
+            <img src="{% static 'images/sandwich.png' %}" alt="Sandwich" />
+            <p style="color: brown;">Sandwichs</p>
+        </a>
+        <a href="{% url 'produits' %}" class="category">
+            <img src="{% static 'images/cookie.png' %}" alt="Cookie" />
+            <p style="color: brown;">Cookies</p>
+        </a>
+        <a href="{% url 'produits' %}" class="category">
+            <img src="{% static 'images/bread.png' %}" alt="Pain" />
+            <p style="color: brown;">Pains</p>
+        </a>
+    </div>
+    
+    
     </section>
+    
 
     <!-- Section À propos -->
     <section class="about">
@@ -80,42 +82,32 @@
         </div>
         <div class="infos">
           <h2>À propos de Wawel</h2>
-          <p
-            >Depuis plus de 20 ans, Wawel redéfinit l'art de la boulangerie en
-            alliant héritage artisanal et créativité moderne, pour offrir des
-            saveurs uniques et raffinées.</p
-          >
-          <p
-            >Notre passion pour la qualité se reflète dans chaque création. Que
-            ce soit un gâteau classique ou une pâtisserie innovante, chaque
-            produit est confectionné avec soin et amour.</p
-          >
+          <p>
+            Depuis plus de 20 ans, Wawel se distingue par son savoir-faire artisanal et sa créativité moderne. Chaque création est une expérience unique, mêlant tradition et innovation pour éveiller vos papilles.
+          </p>
+          <p>
+            De nos pâtisseries classiques à nos innovations les plus audacieuses, nous nous engageons à offrir des produits confectionnés avec soin et amour, toujours à base d’ingrédients de qualité.
+          </p>
           <a href="/about/" class="btn">En savoir plus</a>
         </div>
       </div>
       <div class="about-content">
         <div class="infos">
           <h2>Notre Engagement</h2>
-          <p
-            >Chez Wawel, nous privilégions les ingrédients locaux et de saison
-            pour garantir la fraîcheur et la qualité. Nous croyons que chaque
-            bouchée doit être un moment de plaisir.</p
-          >
-          <p
-            >Notre équipe dévouée travaille chaque jour pour vous offrir une
-            expérience gourmande qui combine l'authenticité et l'innovation.
-            Rejoignez-nous et découvrez un univers de saveurs
-            exceptionnelles.</p
-          >
+          <p>
+            Chez Wawel, nous valorisons les ingrédients locaux et respectons les saisons pour garantir fraîcheur et authenticité. Chaque bouchée raconte une histoire, celle de notre passion pour l'excellence.
+          </p>
+          <p>
+            Notre équipe talentueuse s’efforce chaque jour de vous proposer des créations qui allient qualité, innovation, et durabilité, pour un plaisir gourmand incomparable.
+          </p>
           <a href="/about/" class="btn">En savoir plus</a>
         </div>
         <div class="about-image">
-          <img src="{% static 'images/about.jpg' %}" alt="À propos de Wawel" />
+          <img src="{% static 'images/about.jpg' %}" alt="Notre Engagement" />
         </div>
       </div>
     </section>
     
-
     <!-- Section Promotion Dynamique -->
     {% if promotions %}
 <section class="promo">
@@ -142,70 +134,84 @@
 
     
  <!-- Section Newsletter -->
-    <section class="newsletter">
-      <h2>Abonnez-vous à notre Newsletter</h2>
-      <p>
-        Ne manquez aucune de nos nouvelles créations et offres exclusives ! Inscrivez-vous et restez informé.
-      </p>
+ <section class="newsletter">
+  <h2>Restez Connectés</h2>
+  <p>
+    Recevez nos dernières actualités, offres spéciales et recettes exclusives directement dans votre boîte mail. Profitez d'avantages exclusifs en devenant membre !
+  </p>
 
-      <!-- Affichage des messages de confirmation et d'erreur -->
-      {% if messages %}
-      <div class="messages">
-        {% for message in messages %}
-        <div class="{{ message.tags }}">{{ message }}</div>
-        {% endfor %}
-      </div>
-      {% endif %}
+  <!-- Affichage des messages de confirmation et d'erreur -->
+  {% if messages %}
+  <div class="messages">
+    {% for message in messages %}
+    <div class="{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
 
-      <!-- Formulaire pour la newsletter -->
-      <div class="newslet">
-        <form action="{% url 'newsletter' %}" method="POST" class="newsletter-form">
-          {% csrf_token %}
-          <input
-            type="email"
-            name="email"
-            placeholder="Entrez votre email"
-            required
-          />
-          <button type="submit" class="btn">S'abonner</button>
-        </form>
+  <!-- Formulaire pour la newsletter et Google Maps -->
+  <div class="newslet">
+    <form action="{% url 'newsletter' %}" method="POST" class="newsletter-form">
+      {% csrf_token %}
+      <input
+        type="email"
+        name="email"
+        placeholder="Entrez votre adresse e-mail"
+        required
+      />
+      <button type="submit" class="btn">Je m'abonne</button>
+    </form>
 
-        <!-- Carte Google Maps -->
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.6334571182034!2d-73.56725668444739!3d45.51613617910144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a3a0a7df4f3%3A0x3e0a7b2e0e7d4e20!2s2543%20Rue%20Ontario%20E%2C%20Montréal%2C%20QC%20H2K%201W5%2C%20Canada!5e0!3m2!1sen!2sca!4v1690000000000"
-          width="100%"
-          height="300"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
-      </div>
-    </section>
+    <!-- Carte Google Maps -->
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.6334571182034!2d-73.56725668444739!3d45.51613617910144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a3a0a7df4f3%3A0x3e0a7b2e0e7d4e20!2s2543%20Rue%20Ontario%20E%2C%20Montréal%2C%20QC%20H2K%201W5%2C%20Canada!5e0!3m2!1sen!2sca!4v1690000000000"
+        width="100%"
+        height="100%"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+</section>
 
 
     <!-- Pied de page -->
-    <footer>
-      <div class="footer-content">
-        <div class="footer-links">
-          <div>
-            <h4>Ressources</h4>
-            <ul>
-              <li><a href="/menu/">Menu</a></li>
-              <li><a href="/contact/">Contact</a></li>
-              <li><a href="/privacy/">Politique de confidentialité</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Contactez-nous</h4>
-            <ul>
-              <li>2543 Rue Ontario E, Montréal</li>
-              <li>+1 514-123-4567</li>
-              <li>info@wawel.com</li>
-            </ul>
-          </div>
-        </div>
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>À propos</h4>
+      <p>
+        Wawel, votre artisan pâtissier depuis plus de 20 ans. Nous nous engageons à vous offrir des créations gourmandes d’exception, préparées avec passion et savoir-faire.
+      </p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank"><img src="{% static 'images/facebook-icon.png' %}" alt="Facebook"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="{% static 'images/instagram-icon.png' %}" alt="Instagram"></a>
+        <a href="https://wa.me/1234567890" target="_blank"><img src="{% static 'images/whatsapp-icon.png' %}" alt="WhatsApp"></a>
       </div>
-      <p>&copy; 2024 Wawel - Tous droits réservés</p>
-    </footer>
+    </div>
+    <div class="footer-section">
+      <h4>Ressources</h4>
+      <ul>
+        <li><a href="/produits/">Nos produits</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/privacy/">Politique de confidentialité</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Contactez-nous</h4>
+      <ul>
+        <li>2543 Rue Ontario E, Montréal</li>
+        <li>+1 514-123-4567</li>
+        <li><a href="mailto:info@wawelpatisseries.com">info@wawelpatisseries.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Wawel - Tous droits réservés</p>
+  </div>
+</footer>
+
   </body>
 </html>
