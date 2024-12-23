@@ -1,23 +1,30 @@
 /* Styles généraux */
-body {
+body.success-page {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    background-image: url('../images/submit.jpg');
+    background-size: cover; /* Remplit toute la fenêtre sans déformation */
+    background-position: center; /* Centre l'image dans la fenêtre */
+    background-repeat: no-repeat; /* Empêche la répétition */
+    width: 100vw; /* Largeur égale à 100% de la fenêtre */
+    height: 100vh; /* Hauteur égale à 100% de la fenêtre */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    text-align: center; /* Centre le contenu */
+    overflow: hidden; /* Évite les débordements */
+    box-sizing: border-box; /* Inclut les marges et bordures dans la largeur/hauteur */
 }
 
 /* Conteneur principal */
 .success-container {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* Transparence visible */
+    padding: 40px;
+    border-radius: 20px; /* Arrondi accentué */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
     max-width: 500px;
+    text-align: center; /* Centre le contenu */
+    z-index: 1; /* Assure que le conteneur est au-dessus du fond */
 }
 
 /* Icône */
@@ -29,31 +36,35 @@ body {
 
 /* Titre */
 .success-container h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #27ae60;
     margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 /* Paragraphe */
 .success-container p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #555;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 /* Bouton */
 .success-container .btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 12px 25px;
+    font-size: 1.1rem;
     color: #fff;
     background-color: #27ae60;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .success-container .btn:hover {
     background-color: #219150;
+    transform: translateY(-3px);
 }
