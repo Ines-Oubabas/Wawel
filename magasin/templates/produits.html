@@ -16,7 +16,7 @@
 
     <!-- Boucle sur les catégories -->
     {% for categorie_name, sous_categories in categories.items %}
-    <section class="product-category">
+    <section class="product-category" style="background: {% cycle '#f9f9f9' '#ffffff' %};">
         <!-- Titre de la catégorie -->
         <h2>{{ categorie_name }}</h2>
 
@@ -29,7 +29,7 @@
                 <div class="product-list">
                     <!-- Boucle sur les produits -->
                     {% for produit in produits %}
-                    <div class="product-card" style="--order:{{ forloop.counter }}">
+                    <div class="product-card" style="--order:{{ forloop.counter }};">
                         {% if produit.image %}
                             <img src="{{ produit.image.url }}" alt="{{ produit.name_fr }}">
                         {% else %}
