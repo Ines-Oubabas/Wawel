@@ -72,21 +72,33 @@ header nav ul li a.active {
 /* Section "Qui nous sommes" */
 .about-us {
     display: flex;
+    flex-direction: column;
     gap: 30px;
     padding: 60px 10%;
     align-items: center;
     background-color: #fff;
 }
 
+.about-images {
+    display: flex;
+    gap: 20px;
+}
+
 .about-images img {
     width: 100%;
-    max-width: 500px;
+    max-width: 300px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-images img:hover {
+    transform: scale(1.05);
 }
 
 .about-text {
-    max-width: 50%;
+    max-width: 800px;
+    text-align: center;
 }
 
 .about-text h2 {
@@ -102,7 +114,7 @@ header nav ul li a.active {
     width: 80px;
     height: 4px;
     background-color: #f4a261;
-    margin-top: 10px;
+    margin: 10px auto 0;
 }
 
 .about-text p {
@@ -125,18 +137,28 @@ header nav ul li a.active {
     margin-bottom: 30px;
 }
 
-.our-history .timeline .event {
+.our-history p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event {
     background-color: #fff;
     border-radius: 10px;
     color: #333;
     padding: 20px;
-    margin: 20px 0;
     position: relative;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     animation: fadeInUp 1s ease-in-out;
 }
 
-.our-history .timeline .event span {
+.event span {
     font-weight: bold;
     display: block;
     margin-top: 10px;
@@ -146,6 +168,7 @@ header nav ul li a.active {
 /* Section "Toujours bien cuit" */
 .always-baked {
     display: flex;
+    flex-direction: column;
     gap: 30px;
     align-items: center;
     padding: 60px 10%;
@@ -157,6 +180,16 @@ header nav ul li a.active {
     max-width: 500px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.always-baked .image img:hover {
+    transform: scale(1.05);
+}
+
+.always-baked .text {
+    max-width: 800px;
+    text-align: center;
 }
 
 .always-baked .text h2 {
@@ -195,7 +228,7 @@ header nav ul li a.active {
 
 /* Footer */
 footer {
-    background-color: #000000;
+    background-color: #000;
     color: #fff;
     text-align: center;
     padding: 20px 0;

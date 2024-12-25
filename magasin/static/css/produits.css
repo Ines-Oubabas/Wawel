@@ -24,7 +24,7 @@ body::before {
 header {
     margin: 0;
     padding: 20px 0; /* Ajustez la valeur selon vos besoins */
-    background-color: #f8f8f8;
+    background-color: #800000;
 }
 
 /* Titre principal */
@@ -35,7 +35,7 @@ header {
     margin: 100px 0 30px; /* Décalage du titre vers le bas */
     font-weight: bold;
     text-transform: uppercase;
-    background: linear-gradient(to right, #800000, #b22222);
+    background: linear-gradient(to right, #fff, #fff);
     background-clip: text; 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;
@@ -47,7 +47,7 @@ header {
     display: block;
     width: 180px;
     height: 4px;
-    background-color: #b22222;
+    background-color: #fff;
     margin: 10px auto 0;
     animation: grow-line 1s ease-out forwards;
 }
@@ -112,7 +112,7 @@ header {
 }
 
 .product-card {
-    background: #fff;
+    background: #800000;
     border: 2px solid #f1f1f1;
     border-radius: 15px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
@@ -128,7 +128,7 @@ header {
 .product-card:hover {
     transform: scale(1.05);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-    border-color: #800000;
+    border-color: #fffb00;
 }
 
 .product-card img {
