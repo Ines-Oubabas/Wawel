@@ -1,0 +1,43 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+<h1>Modifier les produits sélectionnés</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="apply" value="1">
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>Nom (FR)</th>
+                <th>Nom (EN)</th>
+                <th>Code</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <input type="hidden" name="product_ids" value="{{ product.id }}">
+            <tr>
+                <td>
+                    <input type="text" name="name_fr_{{ product.id }}" value="{{ product.name_fr }}" class="vTextField">
+                </td>
+                <td>
+                    <input type="text" name="name_en_{{ product.id }}" value="{{ product.name_en }}" class="vTextField">
+                </td>
+                <td>
+                    <input type="text" name="code_{{ product.id }}" value="{{ product.code }}" class="vTextField">
+                </td>
+                <td>
+                    <textarea name="description_{{ product.id }}" rows="3" cols="40">{{ product.description }}</textarea>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="button-row">
+        <input type="submit" value="Enregistrer les modifications" class="default">
+        <a href="{% url 'admin:magasin_product_changelist' %}" class="button">Annuler</a>
+    </div>
+</form>
+{% endblock %}
