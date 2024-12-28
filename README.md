@@ -1,136 +1,122 @@
-# **WAWEL - Site Web pour la Boulangerie et Pâtisserie**
+# Wawel Patisseries
 
-## 📋 **Description du projet**
+Bienvenue sur le site web officiel de **Wawel**, une pâtisserie artisanale spécialisée dans les créations gourmandes d'exception.
 
-**WAWEL** est un site web conçu pour faciliter la communication entre une boulangerie-pâtisserie et ses clients. Le site permet :
-- D'afficher les produits proposés (pains, viennoiseries, salés, etc.).
-- De permettre aux clients d'envoyer des messages via un formulaire de contact.
-- De présenter l'histoire et l'équipe de la boulangerie dans la page **À propos**.
-- De gérer des produits, clients et promotions grâce à une interface d'administration dédiée.
+## Description du projet
 
-Ce projet a été développé avec le framework **Django** et suit une structure MVC (Model-View-Controller).
+Ce projet est un site web conçu pour mettre en avant les produits et services de la pâtisserie Wawel. Il permet de :
 
----
+- Présenter les informations sur la pâtisserie et son histoire.
+- Afficher les produits disponibles sous forme de menu.
+- Fournir un formulaire de contact pour les clients.
+- Informer les visiteurs sur la politique de confidentialité.
 
-## 🚀 **Fonctionnalités principales**
+## Fonctionnalités principales
 
-1. **Page d'accueil** :
-   - Accueil chaleureux avec présentation du site.
+1. **Page d'accueil :**
+   - Présentation des promotions actuelles.
+   - Introduction à la pâtisserie et ses engagements.
 
-2. **Page Produits** :
-   - Catégories et sous-catégories organisées avec des images, descriptions et codes des produits.
+2. **Page À propos :**
+   - Histoire et valeurs de la pâtisserie.
 
-3. **Page Contact** :
-   - Les clients peuvent envoyer des messages directement via un formulaire sécurisé.
-   - Confirmation de l'envoi avec une page **"Message envoyé avec succès"**.
+3. **Page Produits :**
+   - Menu organisé par catégories et sous-catégories.
+   - Possibilité d'ajouter de nouvelles catégories et produits via l'administration.
 
-4. **Page À propos** :
-   - Présentation de l'histoire, des valeurs et de l'équipe de la boulangerie.
+4. **Page Contact :**
+   - Formulaire de contact dynamique.
+   - Envoi d'e-mails directement depuis le formulaire.
 
-5. **Administration** :
-   - Gestion des produits, clients et promotions.
-   - Ajout de nouveaux produits avec images et descriptions.
+5. **Page Politique de confidentialité :**
+   - Informations détaillées sur la gestion des données personnelles des utilisateurs.
 
----
+6. **Administration :**
+   - Gestion des produits, promotions et abonnés à la newsletter.
+   - Personnalisation des contenus via le panneau d'administration de Django.
 
-## 🛠️ **Technologies utilisées**
+## Technologies utilisées
 
-- **Backend** : Django (Python)
-- **Frontend** : HTML5, CSS3, JavaScript
-- **Base de données** : SQLite
-- **Envoi d'email** : SMTP avec Gmail
-- **Hébergement** : Serveur local (pour le développement)
+- **Django (Framework backend)** : Gestion des modèles, des vues et des templates.
+- **HTML5, CSS3, JavaScript** : Création d'une interface utilisateur moderne et interactive.
+- **SQLite3** : Base de données légère pour stocker les données.
+- **Django Email Backend** : Gestion sécurisée de l'envoi d'e-mails.
 
----
+## Prérequis
 
-## 📂 **Structure du projet**
+- Python 3.x
+- Pipenv ou virtualenv pour la gestion des environnements virtuels.
 
-```
-WAWEL/
-👉 magasin/                     # Application principale Django
-👉       migrations/              # Fichiers de migration de la base de données
-👉       static/                  # Fichiers statiques (CSS, images)
-👉       templates/               # Fichiers HTML
-👉       ┗️ utils/               # Composants réutilisables (ex: nav.html)
-👉       ┗️ index.html           # Page d'accueil
-👉       ┗️ produits.html        # Page des produits
-👉       ┗️ contact.html         # Page de contact
-👉       ┗️ about.html           # Page à propos
-👉       ┗️ success.html         # Page de confirmation de message
-👉       ┗️ admin/               # Pages d'administration
-👉       forms.py                 # Formulaires Django
-👉       models.py                # Modèles de données (Produits, Clients, Promotions)
-👉       views.py                 # Logique métier (vues Django)
-👉       urls.py                  # Configuration des routes URL
+## Installation
 
-👉 wawel/                       # Configuration du projet Django
-👉 db.sqlite3                   # Base de données SQLite
-👉 manage.py                    # Commande pour gérer le projet Django
-👉 README.md                    # Documentation du projet
-```
+1. Clonez le dépôt :
 
----
+   ```bash
+   git clone <lien_du_dépôt>
+   cd Wawel-main
+   ```
 
-## 📦 **Installation du projet**
+2. Créez et activez un environnement virtuel :
 
-### **1. Cloner le projet**
-```bash
-git clone https://github.com/nom-utilisateur/wawel.git
-cd wawel
-```
+   ```bash
+   python -m venv env
+   source env/bin/activate # sous Windows : env\Scripts\activate
+   ```
 
-### **2. Configurer l'environnement virtuel**
-```bash
-python -m venv env
-source env/bin/activate       # Sur macOS/Linux
-env\Scripts\activate          # Sur Windows
-```
+3. Installez les dépendances :
 
-### **3. Installer les dépendances**
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### **4. Configurer l'email SMTP (settings.py)**
-Remplacez les paramètres suivants dans **wawel/settings.py** avec vos informations Gmail :
+4. Configurez les variables d'environnement dans un fichier `.env` :
 
-```python
-EMAIL_HOST_USER = 'votre-adresse-email@gmail.com'
-EMAIL_HOST_PASSWORD = 'votre-mot-de-passe-d-application'
-```
+   ```env
+   SECRET_KEY='votre_clé_secrète_django'
+   DEBUG=True
+   EMAIL_HOST_USER='votre_email@gmail.com'
+   EMAIL_HOST_PASSWORD='votre_mot_de_passe'
+   ```
 
-### **5. Appliquer les migrations**
-```bash
-python manage.py makemigrations
-python manage.py migrate
-```
+5. Appliquez les migrations de la base de données :
 
-### **6. Lancer le serveur local**
-```bash
-python manage.py runserver
-```
+   ```bash
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
 
-Accédez au site à l'adresse **http://127.0.0.1:8000/**.
+6. Lancez le serveur de développement :
 
----
+   ```bash
+   python manage.py runserver
+   ```
 
-## 📈 **Pages principales**
-- **Accueil** : Page d'accueil générale.
-- **Produits** : Catégories et produits proposés.
-- **Contact** : Formulaire pour envoyer un message.
-- **À propos** : Informations sur l'entreprise.
-- **Administration** : Pages pour gérer les produits et les clients.
+7. Accédez au site à l'adresse : [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+## Structure du projet
+
+- **templates/** : Contient tous les fichiers HTML pour le rendu des pages.
+- **static/** : Contient les fichiers CSS, JavaScript et les images.
+- **models.py** : Définit les modèles pour les produits, clients, promotions, etc.
+- **views.py** : Gère la logique des pages et des interactions utilisateur.
+- **forms.py** : Définit les formulaires pour les produits et promotions.
+- **urls.py** : Gère les routes du site.
+
+## Fonctionnalités à venir
+
+- Intégration d'un système de commande en ligne.
+- Ajout d'une page "Blog" pour partager des recettes et des conseils pâtissiers.
+- Notifications par e-mail pour les promotions spéciales.
+
+## Auteurs
+
+- **Ines Oubabas** - Développement backend et intégration frontend.
+- **Équipe Wawel** - Contributions diverses.
+
+## Licence
+
+Ce projet est sous licence MIT. Consultez le fichier LICENSE pour plus d'informations.
 
 ---
 
-## 👥 **Crédits**
-- **Développement** : Ines Oubabas
-- **Icônes utilisées** : [Tick icons created by Octopocto - Flaticon](https://www.flaticon.com/free-icons/tick)
-- **Framework** : Django
-
----
-
-## 📝 **Licence**
-Ce projet est sous licence MIT. Vous êtes libre de l'utiliser, le modifier et le partager.
-
----
+Merci de visiter notre site et de soutenir la pâtisserie Wawel. Nous espérons que vous apprécierez nos créations gourmandes !
