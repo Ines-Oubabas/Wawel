@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% include './utils/nav.html' %}
+
+    <!-- Header de la page -->
+    <header class="privacy-header">
+        <div class="header-overlay">
+            <h1>Politique de Confidentialité</h1>
+        </div>
+    </header>
+    
+
+    <!-- Contenu principal -->
+    <main class="privacy-content">
+        <h2>Introduction</h2>
+        <p>
+            Chez Wawel, nous nous engageons à protéger vos données personnelles.
+            Cette page explique comment nous collectons, utilisons et protégeons vos informations.
+        </p>
+
+        <h2>Informations Collectées</h2>
+        <ul>
+            <li>Nom, prénom</li>
+            <li>Adresse e-mail</li>
+            <li>Messages ou commentaires envoyés via le formulaire de contact</li>
+        </ul>
+
+        <h2>Utilisation des Données</h2>
+        <p>
+            Vos données sont utilisées pour :
+        </p>
+        <ul>
+            <li>Vous envoyer des informations sur nos promotions et événements</li>
+            <li>Répondre à vos questions ou demandes</li>
+        </ul>
+
+        <h2>Vos Droits</h2>
+        <p>
+            Vous avez le droit d'accéder, de corriger ou de supprimer vos données personnelles.
+            Contactez-nous à <a href="mailto:info@wawelpatisseries.com">info@wawelpatisseries.com</a>.
+        </p>
+    </main>
+
+    <!-- Pied de page intégré -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>À propos</h4>
+                <p>
+                    Wawel, votre artisan pâtissier depuis plus de 20 ans. Nous nous engageons à vous offrir des créations gourmandes d’exception, préparées avec passion et savoir-faire.
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="{% static 'images/facebook-icon.png' %}" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="{% static 'images/instagram-icon.png' %}" alt="Instagram">
+                    </a>
+                    <a href="https://wa.me/1234567890" target="_blank">
+                        <img src="{% static 'images/whatsapp-icon.png' %}" alt="WhatsApp">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Ressources</h4>
+                <ul>
+                    <li><a href="/produits/">Nos produits</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="{% url 'privacy' %}">Politique de confidentialité</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contactez-nous</h4>
+                <ul>
+                    <li>2543 Rue Ontario E, Montréal</li>
+                    <li>+1 514-123-4567</li>
+                    <li><a href="mailto:info@wawelpatisseries.com">info@wawelpatisseries.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Wawel - Tous droits réservés</p>
+        </div>
+    </footer>
+</body>
+</html>

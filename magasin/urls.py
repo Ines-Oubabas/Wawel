@@ -9,5 +9,5 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),  # Page de contact
     path('submit-contact/', views.submit_contact, name='submit_contact'),  # Soumission du formulaire
     path('newsletter/', views.newsletter_subscription, name='newsletter'),
-    
+     path('privacy/', views.privacy, name='privacy'),  # Politique de Confidentialité
 ]

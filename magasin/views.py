@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.http import HttpResponse
+import os
+from django.template.loader import render_to_string
 from django.contrib import messages
 from django.core.mail import EmailMessage
 from .models import Product, Client, Promotion# Importation des modèles nécessaires
@@ -146,3 +148,38 @@ def newsletter_subscription(request):
         else:
             messages.error(request, "Veuillez fournir une adresse email valide.")
     return redirect("index")
+
+
+def privacy(request):
+    """
+    Affiche la page de Politique de Confidentialité.
+    """
+    # Contenu statique intégré directement dans le code
+    content = """
+    <h2>Introduction</h2>
+    <p>
+        Chez Wawel, nous nous engageons à protéger vos données personnelles.
+        Cette page explique comment nous collectons, utilisons et protégeons vos informations.
+    </p>
+    <h2>Informations Collectées</h2>
+    <ul>
+        <li>Nom, prénom</li>
+        <li>Adresse e-mail</li>
+        <li>Messages ou commentaires envoyés via le formulaire de contact</li>
+    </ul>
+    <h2>Utilisation des Données</h2>
+    <p>
+        Vos données sont utilisées pour :
+    </p>
+    <ul>
+        <li>Vous envoyer des informations sur nos promotions et événements</li>
+        <li>Répondre à vos questions ou demandes</li>
+    </ul>
+    <h2>Vos Droits</h2>
+    <p>
+        Vous avez le droit d'accéder, de corriger ou de supprimer vos données personnelles.
+        Contactez-nous à <a href="mailto:info@wawelpatisseries.com">info@wawelpatisseries.com</a>.
+    </p>
+    """
+    # Retourne la page avec le contenu injecté
+    return render(request, 'privacy.html', {'content': content})
