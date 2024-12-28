@@ -176,7 +176,7 @@ header .reseaux{
 }
 
 .promo .btn:hover {
-    background-color: #e62222;
+    background-color: #614729;
     transform: scale(1.1);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
@@ -237,7 +237,7 @@ header .reseaux{
     display: block;
     width: 80px;
     height: 5px;
-    background: #e62222;
+    background: #800000;
     margin: 10px auto 0;
     border-radius: 3px;
 }
@@ -392,7 +392,7 @@ header .reseaux{
     display: block;
     width: 60px;
     height: 4px;
-    background: #e62222;
+    background: #800000;
     margin-top: 10px;
     border-radius: 2px;
 }
@@ -466,7 +466,7 @@ header .reseaux{
     display: block;
     width: 120px;
     height: 4px;
-    background: #e62222;
+    background: #800000;
     margin: 10px auto 0;
     border-radius: 3px;
 }
@@ -627,7 +627,7 @@ footer {
 }
 
 .footer-section ul li a {
-    color: #e62222; /* Liens dorés */
+    color: #fff; /* Liens dorés */
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;

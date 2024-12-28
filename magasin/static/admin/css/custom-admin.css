@@ -1,0 +1,142 @@
+/* Forcer l'affichage du background en premier */
+body {
+    background: url('/static/admin/image/background.png') no-repeat center center fixed;
+    background-size: cover;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Custom Admin Panel Styles */
+
+/* Change background color of the sidebar */
+.sidebar {
+    background-color: #800000;
+}
+
+/* Change text color and hover effect for sidebar links */
+.sidebar a {
+    color: #ecf0f1 !important;
+    transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #f39c12 !important;
+    transform: translateX(5px); /* Ajoute un effet de glissement */
+}
+
+/* Style for the main header */
+.navbar {
+    background-color: #800000 !important;
+}
+
+.navbar .navbar-brand {
+    color: #ecf0f1 !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Buttons customization */
+.button {
+    background-color: #16a085 !important;
+    border-color: #16a085 !important;
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #1abc9c !important;
+    border-color: #1abc9c !important;
+    transform: scale(1.05); /* Ajoute un léger effet de zoom */
+}
+
+/* Login and Logout page customization */
+.login-page {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.login-logo img {
+    max-width: 180px; /* Ajustement de la largeur maximale */
+    height: auto; /* Conserve les proportions */
+    display: block;
+    margin: 20px auto; /* Centre l'image */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.login-logo img:hover {
+    transform: scale(1.1); /* Zoom sur le logo au survol */
+    opacity: 0.9;
+}
+
+/* Login form box */
+.login-box {
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.5); /* Couleur avec transparence */
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(235, 187, 31, 0.4); /* Effet d'ombre plus léger */
+    margin: 20px auto;
+    transition: transform 0.3s ease, background 0.3s ease; /* Transition pour la transparence */
+}
+
+.login-box:hover {
+    transform: translateY(-5px);
+    background: rgba(136, 38, 38, 0.9); /* Augmente légèrement l'opacité au survol */
+}
+
+/* Input fields */
+.login-box input {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.login-box input:focus {
+    border-color: #16a085;
+    box-shadow: 0 0 5px rgba(22, 160, 133, 0.5);
+    outline: none;
+}
+
+/* Login button */
+.login-box .button {
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+
+/* Footer text */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+footer:hover {
+    opacity: 1;
+}
+
+/* Add animation to the entire page */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Additional interactive animations */
+.login-page .login-box input:hover {
+    background-color: #f9f9f9;
+}
