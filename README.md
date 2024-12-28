@@ -1,76 +1,85 @@
-# Wawel Patisseries
+Voici une version améliorée de votre fichier README avec les modifications demandées :  
 
-Bienvenue sur le site web officiel de **Wawel**, une pâtisserie artisanale spécialisée dans les créations gourmandes d'exception.
+```markdown
+# Wawel Pâtisseries et Boulangerie
 
-## Description du projet
+Bienvenue sur le site web officiel de **Wawel**, une pâtisserie et boulangerie artisanale spécialisée dans les créations gourmandes et le savoir-faire traditionnel.
 
-Ce projet est un site web conçu pour mettre en avant les produits et services de la pâtisserie Wawel. Il permet de :
+---
 
-- Présenter les informations sur la pâtisserie et son histoire.
-- Afficher les produits disponibles sous forme de menu.
-- Fournir un formulaire de contact pour les clients.
-- Informer les visiteurs sur la politique de confidentialité.
+## 🥐 Description du projet
 
-## Fonctionnalités principales
+Ce projet est un site web conçu pour mettre en avant les produits et services de la pâtisserie et boulangerie **Wawel**. Il permet de :
+- Présenter les informations sur l'histoire et les valeurs de la boutique.
+- Afficher les produits sous forme de menu organisé par catégories et sous-catégories.
+- Proposer un formulaire de contact interactif.
+- Informer les visiteurs sur la politique de confidentialité et la gestion des données personnelles.
+
+---
+
+## 🌟 Fonctionnalités principales
 
 1. **Page d'accueil :**
    - Présentation des promotions actuelles.
-   - Introduction à la pâtisserie et ses engagements.
+   - Introduction à l'univers de la pâtisserie et boulangerie Wawel.
 
 2. **Page À propos :**
-   - Histoire et valeurs de la pâtisserie.
+   - Histoire, engagement, et valeurs de la boutique.
 
 3. **Page Produits :**
    - Menu organisé par catégories et sous-catégories.
-   - Possibilité d'ajouter de nouvelles catégories et produits via l'administration.
+   - Gestion facile des produits et catégories via l'administration.
 
 4. **Page Contact :**
-   - Formulaire de contact dynamique.
-   - Envoi d'e-mails directement depuis le formulaire.
+   - Formulaire dynamique pour contacter la boutique.
+   - Envoi direct des messages par e-mail.
 
 5. **Page Politique de confidentialité :**
-   - Informations détaillées sur la gestion des données personnelles des utilisateurs.
+   - Informations claires sur la gestion des données des utilisateurs.
 
 6. **Administration :**
-   - Gestion des produits, promotions et abonnés à la newsletter.
-   - Personnalisation des contenus via le panneau d'administration de Django.
+   - Gestion des produits, promotions, et abonnés à la newsletter via le panneau Django.
+   - Personnalisation des contenus du site.
 
-## Technologies utilisées
+---
 
-- **Django (Framework backend)** : Gestion des modèles, des vues et des templates.
+## ⚙️ Technologies utilisées
+
+- **Django (Backend)** : Gestion des modèles, vues, templates, et logique applicative.
 - **HTML5, CSS3, JavaScript** : Création d'une interface utilisateur moderne et interactive.
-- **SQLite3** : Base de données légère pour stocker les données.
+- **SQLite3** : Base de données pour stocker les informations.
 - **Django Email Backend** : Gestion sécurisée de l'envoi d'e-mails.
+- **Responsive Design** : Adaptabilité sur tous les écrans (desktop, tablette, mobile).
 
-## Prérequis
+---
+
+## 🔧 Prérequis
 
 - Python 3.x
-- Pipenv ou virtualenv pour la gestion des environnements virtuels.
+- Pipenv ou virtualenv pour gérer les environnements virtuels.
 
-## Installation
+---
 
-1. Clonez le dépôt :
+## 🚀 Installation
 
+1. **Clonez le dépôt :**
    ```bash
    git clone <lien_du_dépôt>
    cd Wawel-main
    ```
 
-2. Créez et activez un environnement virtuel :
-
+2. **Créez et activez un environnement virtuel :**
    ```bash
    python -m venv env
    source env/bin/activate # sous Windows : env\Scripts\activate
    ```
 
-3. Installez les dépendances :
-
+3. **Installez les dépendances :**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Configurez les variables d'environnement dans un fichier `.env` :
-
+4. **Configurez les variables d'environnement dans un fichier `.env` :**
    ```env
    SECRET_KEY='votre_clé_secrète_django'
    DEBUG=True
@@ -78,45 +87,68 @@ Ce projet est un site web conçu pour mettre en avant les produits et services d
    EMAIL_HOST_PASSWORD='votre_mot_de_passe'
    ```
 
-5. Appliquez les migrations de la base de données :
-
+5. **Appliquez les migrations de la base de données :**
    ```bash
    python manage.py makemigrations
    python manage.py migrate
    ```
 
-6. Lancez le serveur de développement :
-
+6. **Lancez le serveur de développement :**
    ```bash
    python manage.py runserver
    ```
 
-7. Accédez au site à l'adresse : [http://127.0.0.1:8000](http://127.0.0.1:8000).
-
-## Structure du projet
-
-- **templates/** : Contient tous les fichiers HTML pour le rendu des pages.
-- **static/** : Contient les fichiers CSS, JavaScript et les images.
-- **models.py** : Définit les modèles pour les produits, clients, promotions, etc.
-- **views.py** : Gère la logique des pages et des interactions utilisateur.
-- **forms.py** : Définit les formulaires pour les produits et promotions.
-- **urls.py** : Gère les routes du site.
-
-## Fonctionnalités à venir
-
-- Intégration d'un système de commande en ligne.
-- Ajout d'une page "Blog" pour partager des recettes et des conseils pâtissiers.
-- Notifications par e-mail pour les promotions spéciales.
-
-## Auteurs
-
-- **Ines Oubabas** - Développement backend et intégration frontend.
-- **Équipe Wawel** - Contributions diverses.
-
-## Licence
-
-Ce projet est sous licence MIT. Consultez le fichier LICENSE pour plus d'informations.
+7. **Accédez au site dans votre navigateur à :**
+   [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ---
 
-Merci de visiter notre site et de soutenir la pâtisserie Wawel. Nous espérons que vous apprécierez nos créations gourmandes !
+## 📂 Structure du projet
+
+- **`templates/`** : Contient les fichiers HTML.
+- **`static/`** : Contient les fichiers CSS, JavaScript et les images.
+- **`models.py`** : Définit les modèles pour les produits, clients, promotions, etc.
+- **`views.py`** : Gère la logique des pages et des interactions utilisateur.
+- **`forms.py`** : Définit les formulaires pour les produits et promotions.
+- **`urls.py`** : Configure les routes du site.
+
+---
+
+## 🛠️ Fonctionnalités à venir
+
+- Intégration d'un système de commande en ligne.
+- Ajout d'une page **Blog** pour partager des recettes et des conseils pâtissiers.
+- Notifications par e-mail pour les promotions spéciales.
+
+---
+
+## 📞 Contact et Coordonnées
+
+**Boutique Wawel**  
+📍 2543 Rue Ontario E, Montréal  
+📞 Téléphone : +1 514-123-4567  
+📧 Email : [info@wawelpatisseries.com](mailto:info@wawelpatisseries.com)
+
+Suivez-nous sur nos réseaux sociaux :  
+- [Facebook](https://www.facebook.com)  
+- [Instagram](https://www.instagram.com)  
+- [WhatsApp](https://wa.me/1234567890)
+
+---
+
+## ✍️ Auteur
+
+Ce projet a été réalisé par :  
+**Ines Oubabas**
+
+N'hésitez pas à me contacter pour toute suggestion ou question concernant ce projet.
+
+---
+
+## 📝 Licence
+
+Ce projet est sous licence [MIT](https://opensource.org/licenses/MIT).  
+Vous êtes libre de l'utiliser et de le modifier à votre convenance.
+```
+
+Vous pouvez utiliser ce contenu comme votre fichier `README.md`. Copiez-le dans un éditeur de texte ou directement dans votre fichier pour l'intégrer au projet.
