@@ -13,48 +13,37 @@
     {% include './utils/nav.html' %}
 
     <!-- Section Héro -->
-<header class="hero">
-  <div class="hero-text">
-    <span>Depuis 2015</span>
-    <h1>Le gâteau parfait, chaque jour !</h1>
-    <h4>Des créations artisanales, préparées avec amour et savoir-faire.</h4>
-    <p>
-      Des gâteaux et pâtisseries qui marient tradition et innovation pour une
-      expérience gourmande inoubliable.
-    </p>
-    <div class="btns">
-      <a href="/contact/" class="btn btn-primary">Rejoignez-nous</a>
-      <a href="/about/" class="btn btn-secondary">Découvrez notre histoire</a>
-    </div>
-  </div>
-  <!-- Réseaux sociaux -->
-  <div class="reseaux">
-    <hr style="width: 40px" />
-    <a href="https://www.instagram.com" target="_blank">
-      <img
-        src="{% static 'images/instagram-icon.png' %}"
-        alt="Instagram"
-        class="social-icon"
-      />
-    </a>
-    <a href="https://www.facebook.com" target="_blank">
-      <img
-        src="{% static 'images/facebook-icon.png' %}"
-        alt="Facebook"
-        class="social-icon"
-      />
-    </a>
-    <a href="https://wa.me/1234567890" target="_blank">
-      <img
-        src="{% static 'images/whatsapp-icon.png' %}"
-        alt="WhatsApp"
-        class="social-icon"
-        style="height: 28px; width: 28px;"
-      />
-    </a>
-    <hr style="width: 40px" />
-  </div>
-</header>
+    <header class="hero">
+      <div class="hero-text">
+        <span>Depuis 2015</span>
+        <h1>Le gâteau parfait, chaque jour !</h1>
+        <h4
+          >Des créations artisanales, préparées avec amour et savoir-faire.</h4
+        >
+        <p
+          >Des gâteaux et pâtisseries qui marient tradition et innovation pour
+          une expérience gourmande inoubliable.</p
+        >
+        <div class="btns">
+          <a href="/contact/">Rejoignez-nous</a>
+          <a href="/about/">Découvrez notre histoire</a>
+        </div>
+      </div>
+      <!-- Réseaux sociaux -->
+      <div class="reseaux">
+        <hr style="width: 40px" />
+        <a href="https://www.instagram.com" target="_blank">
+          <img src="{% static 'images/instagram-icon.png' %}" alt="Instagram" />
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="{% static 'images/facebook-icon.png' %}" alt="Facebook" />
+        </a>
+        <a href="https://wa.me/1234567890" target="_blank">
+          <img src="{% static 'images/whatsapp-icon.png' %}" style="height: 28px; width: 28px;" alt="WhatsApp" />
+        </a>
+        <hr style="width: 40px" />
+      </div>
+    </header>
 
     <!-- Section Boutique -->
     <section class="store">
@@ -94,7 +83,7 @@
         <div class="infos">
           <h2>À propos de Wawel</h2>
           <p>
-            Depuis plus de 20 ans, Wawel se distingue par son savoir-faire artisanal et sa créativité moderne. Chaque création est une expérience unique, mêlant tradition et innovation pour éveiller vos papilles.
+            Depuis plus de 10 ans, Wawel se distingue par son savoir-faire artisanal et sa créativité moderne. Chaque création est une expérience unique, mêlant tradition et innovation pour éveiller vos papilles.
           </p>
           <p>
             De nos pâtisseries classiques à nos innovations les plus audacieuses, nous nous engageons à offrir des produits confectionnés avec soin et amour, toujours à base d’ingrédients de qualité.
@@ -114,7 +103,7 @@
           <a href="/about/" class="btn">En savoir plus</a>
         </div>
         <div class="about-image">
-          <img src="{% static 'images/about.jpg' %}" alt="Notre Engagement" />
+          <img src="{% static 'images/engagement.png' %}" alt="Notre Engagement" />
         </div>
       </div>
     </section>
@@ -167,7 +156,7 @@
       <input
         type="email"
         name="email"
-        placeholder="Entrer son email pour s'abonner"
+        placeholder="Entrez votre adresse e-mail"
         required
       />
       <button type="submit" class="btn">Je m'abonne</button>

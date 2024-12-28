@@ -13,8 +13,8 @@
         <!-- Section héro -->
         <section class="hero">
             <div class="overlay">
-                <h1>À propos</h1>
-                <p>La boulangerie au bon pain vous sert depuis 1978.</p>
+                <h1 class="hero-title">À propos</h1>
+                <p class="hero-subtitle">La boulangerie au bon pain vous sert depuis 2015.</p>
             </div>
         </section>
 
@@ -26,7 +26,7 @@
             </div>
             <div class="about-text">
                 <h2>Qui nous sommes ?</h2>
-                <p>Depuis plus de 40 ans, Wawel se consacre à offrir des pains et pâtisseries artisanaux de qualité supérieure.</p>
+                <p>Depuis 2015, Wawel se consacre à offrir des pains et pâtisseries artisanaux de qualité supérieure.</p>
                 <p>Quand un boulanger passionné rencontre une pâtissière talentueuse, la magie opère pour créer des moments inoubliables.</p>
             </div>
         </section>
@@ -34,23 +34,22 @@
         <!-- Section "Notre histoire" -->
         <section class="our-history">
             <h2>Notre histoire</h2>
-            <p>Depuis 1978</p>
             <div class="timeline">
-                <div class="event">
-                    <p>Ouverture de la première boulangerie Wawel à Otawa.</p>
-                    <span>15 mai 1978</span>
+                <div class="event" onclick="toggleEvent(this)">
+                    <p>Ouverture de la première boulangerie Wawel.</p>
+                    <span class="event-date">Janvier 2015</span>
                 </div>
-                <div class="event">
+                <div class="event" onclick="toggleEvent(this)">
                     <p>Introduction des pâtisseries artisanales.</p>
-                    <span>22 avril 1990</span>
+                    <span class="event-date">Mai 2017</span>
                 </div>
-                <div class="event">
-                    <p>Expansion à travers toute le Canada.</p>
-                    <span>Août 2003</span>
+                <div class="event" onclick="toggleEvent(this)">
+                    <p>Expansion à travers toute la région.</p>
+                    <span class="event-date">Août 2019</span>
                 </div>
-                <div class="event">
+                <div class="event" onclick="toggleEvent(this)">
                     <p>Lancement de notre boutique en ligne.</p>
-                    <span>1er janvier 2023</span>
+                    <span class="event-date">Janvier 2025</span>
                 </div>
             </div>
         </section>
@@ -70,5 +69,11 @@
     <footer>
         <p>&copy; 2024 Wawel - Tous droits réservés</p>
     </footer>
+
+    <script>
+        function toggleEvent(eventElement) {
+            eventElement.classList.toggle('expanded');
+        }
+    </script>
 </body>
 </html>

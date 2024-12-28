@@ -27,6 +27,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 # Application definition
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -35,6 +36,27 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'magasin',  # Ajout de votre application
 ]
+
+JAZZMIN_SETTINGS = {
+    "site_title": "Wawel Admin",
+    "site_header": "Administration Wawel",
+    "site_brand": "Wawel",
+    "welcome_sign": "Bienvenue dans l'interface d'administration de Wawel",
+    "show_sidebar": True,
+    "navigation_expanded": True,
+    "icons": {
+        "auth": "fas fa-users-cog",
+        "magasin.Product": "fas fa-bread-slice",
+        "magasin.Promotion": "fas fa-tags",
+        "magasin.Client": "fas fa-user-circle",
+    },
+    "site_logo": "images/logo.png",  # Utilisez un logo de votre application
+    "login_logo": "admin/image/login-logo.png",
+    "login_logo_dark": "admin/image/logo-dark.png",
+    "custom_css": "admin/css/custom-admin.css",  # Fichier CSS personnalisé
+    "custom_js": None,  # Ajoutez des fichiers JS si nécessaire
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

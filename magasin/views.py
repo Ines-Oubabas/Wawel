@@ -136,11 +136,13 @@ def newsletter_subscription(request):
     if request.method == "POST":
         email = request.POST.get("email")
         if email:
-            if not NewsletterSubscriber.objects.filter(email=email).exists():
-                NewsletterSubscriber.objects.create(email=email)
+            # Vérifie si l'email existe déjà
+            if not Newsletter.objects.filter(email=email).exists():
+                # Crée un nouvel abonné
+                Newsletter.objects.create(email=email)
                 messages.success(request, "Vous êtes abonné à notre newsletter avec succès !")
             else:
                 messages.error(request, "Cet email est déjà abonné à notre newsletter.")
         else:
             messages.error(request, "Veuillez fournir une adresse email valide.")
-    return redirect("index")  # Retour à la page d'accueil
+    return redirect("index")

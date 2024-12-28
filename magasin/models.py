@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-# Modèle pour les produits
+
 # Modèle pour les produits
 class Product(models.Model):
     CATEGORY_CHOICES = [
