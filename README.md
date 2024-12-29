@@ -1,5 +1,3 @@
----
-
 # Wawel - Site Web de Boulangerie et Pâtisserie
 
 ## 🥖 Description
@@ -8,7 +6,6 @@
 
 Avec son design convivial et ses fonctionnalités interactives, le site **Wawel** renforce l'image de la boutique tout en facilitant la communication avec les clients.
 
----
 
 ## ✨ Fonctionnalités principales
 
