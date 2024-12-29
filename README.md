@@ -1,5 +1,3 @@
-Voici une version améliorée de votre fichier `README.md` avec une présentation plus soignée et des détails supplémentaires :  
-
 ---
 
 # Wawel - Site Web de Boulangerie et Pâtisserie
