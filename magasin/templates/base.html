@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pâtisserie Wawel : Tradition et Innovation Gourmande">
+    <title>{% block title %}Accueil - Wawel{% endblock %}</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Styles CSS personnalisés -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/nav.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/produits.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}" />
+
+    <!-- HTML5 shim et Respond.js pour la prise en charge des éléments HTML5 et des media queries dans IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body class="{% block body_class %}{% endblock %}">
+    <!-- Inclure la navigation commune -->
+     
+    {% include 'utils/nav.html' %}
+
+    <!-- Contenu dynamique des autres pages -->
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>À propos</h4>
+          <p>
+            Wawel, votre artisan pâtissier depuis plus de 20 ans. Nous nous engageons à vous offrir des créations gourmandes d’exception, préparées avec passion et savoir-faire.
+          </p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><img src="{% static 'images/facebook-icon.png' %}" alt="Facebook"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="{% static 'images/instagram-icon.png' %}" alt="Instagram"></a>
+            <a href="https://wa.me/1234567890" target="_blank"><img src="{% static 'images/whatsapp-icon.png' %}" alt="WhatsApp"></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Ressources</h4>
+          <ul>
+            <li><a href="/produits/">Nos produits</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="{% url 'privacy' %}">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contactez-nous</h4>
+          <ul>
+            <li>2543 Rue Ontario E, Montréal</li>
+            <li>+1 514-123-4567</li>
+            <li><a href="mailto:info@wawelpatisseries.com">info@wawelpatisseries.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Wawel - Tous droits réservés</p>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <!-- jQuery nécessaire pour les plugins JavaScript de Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+    <!-- Votre propre script personnalisé -->
+    <script src="{% static 'js/script.js' %}"></script>
+    <script>
+      function toggleEvent(eventElement) {
+          eventElement.classList.toggle('expanded');
+      }
+    </script>
+  </body>
+</html>

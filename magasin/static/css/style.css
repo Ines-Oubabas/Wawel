@@ -6,14 +6,15 @@
     font-family: "Lexend", sans-serif;
 }
 
-html{
+body, html{
     scroll-behavior: smooth;
+    font-size: 16px !important;
 }
 header{
     min-height: 100dvh;
     background-image: url(../images/header.jpg);
     background-size: cover;
-    padding-top: 120px;
+    padding-top: 250px;
     color: white;
     position: relative;
 }
@@ -34,41 +35,40 @@ header .reseaux{
 .reseaux img:hover{
     transform: scale(1.35);
 }
-.hero-text{
-    max-width: 1000px;
-    width: 100%;
-    margin: 12vh 0 0 15%;
-}
-.hero-text span{
+.hero-textspan{
     color: #ffc800;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 18px;
+    margin: 12vh 12vh 0 15%;
 }
 
-.hero-text h1{
+.hero-texth1{
     font-size: 3.6rem;
+    margin: 1vh 12vh 0 15%;
 }
-.hero-text h4{
+.hero-texth4{
     text-transform: uppercase;
     margin: 10px 0 ;
+    margin: 2vh 12vh 0 15%;
 }
-.hero-text p{
+.hero-textp{
     margin: 25px 0 10px;
     opacity: 0.75;
     line-height: 175%;
     max-width: 570px;
+    margin: 3vh 12vh 0 15%;
 }
 
-.hero-text .btns{
+.hero-textbtns{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 20px;
-    margin-top: 20px;
+    margin: 3vh 12vh 0 15%;
 }
 
-.hero-text .btns a{
+.hero-textbtns a{
     color: white;
     text-decoration: none;
     background-color: red;
@@ -76,13 +76,24 @@ header .reseaux{
     border-radius: 550px;
     box-shadow: 0px 6px 20px 2px rgba(0, 0, 0, 0.15);
     transition: 0.3s;
+    border: none;
 }
-.hero-text .btns a:nth-child(2){
+.hero-textbtns a:nth-child(2){
     background-color: transparent;
     border: 2px solid white;
     color: white;
 }
-.hero-text .btns a:hover{
+/* Effet hover pour le premier bouton */
+.hero-textbtns a:nth-child(1):hover {
+    background-color: red; /* Reste rouge */
+    padding: 16px 38px;
+}
+
+/* Effet hover pour le deuxième bouton */
+.hero-textbtns a:nth-child(2):hover {
+    background-color: transparent; /* Reste transparent */
+    border: 2px solid white; /* Conserve la bordure blanche */
+    color: white; /* Reste en blanc */
     padding: 16px 38px;
 }
 
@@ -441,6 +452,51 @@ header .reseaux{
 .about-image img:hover {
     transform: scale(1.05);
 }
+@media (max-width: 768px) {
+    .about {
+      padding: 40px 10px; /* Réduction du padding */
+    }
+  
+    .about-content {
+      flex-direction: column; /* Colonne pour les petits écrans */
+      gap: 20px; /* Réduction de l'espacement */
+    }
+  
+    .about-content .infos {
+      text-align: center; /* Centrer le texte pour plus d'équilibre */
+      padding: 10px;
+    }
+  
+    .about-content h2 {
+      font-size: 2rem; /* Réduction de la taille du titre */
+    }
+  
+    .about-content p {
+      font-size: 1.1rem; /* Taille du texte plus petite */
+    }
+  
+    .about-content .btn {
+      font-size: 0.9rem; /* Bouton plus petit */
+      padding: 10px 20px; /* Ajuster le padding du bouton */
+    }
+  
+    .about-image img {
+      width: 90%; /* Réduction de la largeur des images */
+    }
+  }
+  @media (min-width: 1200px) {
+    .about-content {
+      gap: 60px; /* Augmenter l'espacement entre les colonnes */
+    }
+  
+    .about-content h2 {
+      font-size: 3.5rem; /* Augmenter la taille des titres */
+    }
+  
+    .about-content p {
+      font-size: 1.4rem; /* Texte légèrement plus grand */
+    }
+  }
 
 /* Newsletter */
 .newsletter {
@@ -479,27 +535,23 @@ header .reseaux{
     margin: 0 auto 40px;
 }
 
-.newslet {
+
+
+.newsletter-form {
     display: flex;
     align-items: center;
-    gap: 30px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.newslet form {
-    flex: 1;
-    display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     background: #ffffff;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     text-align: left;
+    margin: auto;
+    max-width: 1200px;
 }
 
-.newslet form input {
+.newsletter-form input {
     padding: 15px;
     font-size: 1rem;
     border: 2px solid #ddd;
@@ -508,13 +560,13 @@ header .reseaux{
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.newslet form input:focus {
+.newsletter-form input:focus {
     border-color: #800000;
     box-shadow: 0 0 10px rgba(128, 0, 0, 0.2);
     outline: none;
 }
 
-.newslet form button {
+.newsletter-form button {
     padding: 15px;
     font-size: 1.2rem;
     background: #800000;
@@ -527,17 +579,20 @@ header .reseaux{
     text-transform: uppercase;
 }
 
-.newslet form button:hover {
+.newsletter-form button:hover {
     background-color: #e62222;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(230, 34, 34, 0.3);
 }
 
 .map-container {
-    flex: 1;
+    display: flex;
+    align-items: center;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    margin-top: 15px;
+    max-width: 1200px;
 }
 
 .map-container iframe {
@@ -568,74 +623,6 @@ header .reseaux{
     padding: 15px;
     border-radius: 8px;
     margin: 10px 0;
-}
-
-
-/* Footer */
-footer {
-    background-color: #000000; /* Fond sombre */
-    color: #d1d1d1; /* Texte clair */
-    padding: 60px 20px;
-    font-family: Arial, sans-serif;
-    border-top: 3px solid #e64343; /* Rouge profond */
-}
-
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
-    gap: 30px;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 250px;
-    margin: 20px 0;
-}
-
-.footer-section h4 {
-    font-size: 1.5rem;
-    color: #ffa500; /* Rouge profond */
-    margin-bottom: 15px;
-    position: relative;
-}
-
-.footer-section h4::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: #ffa500; /* Barre dorée */
-    margin-top: 8px;
-}
-
-.footer-section p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #d1d1d1; /* Gris clair */
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-section ul li {
-    margin: 10px 0;
-}
-
-.footer-section ul li a {
-    color: #fff; /* Liens dorés */
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.footer-section ul li a:hover {
-    color: #ffa500; /* Rouge profond */
 }
 
 .social-icons {
@@ -848,4 +835,72 @@ footer {
     .privacy-content h2 {
         font-size: 1.6rem;
     }
+}
+/* Footer */
+footer {
+    background-color: #000000; /* Fond sombre */
+    color: #d1d1d1; /* Texte clair */
+    text-align: center;
+    padding: 60px 20px;
+    font-family: Arial, sans-serif;
+    border-top: 3px solid #e64343; /* Rouge profond */
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px 0;
+}
+
+.footer-section h4 {
+    font-size: 1.5rem;
+    color: #ffa500; /* Rouge profond */
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.footer-section h4::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #ffa500; /* Barre dorée */
+    margin-top: 8px;
+}
+
+.footer-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #d1d1d1; /* Gris clair */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    color: #fff; /* Liens dorés */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ffa500; /* Rouge profond */
 }

@@ -1,20 +1,15 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À propos - Wawel</title>
-    <link rel="stylesheet" href="{% static 'css/about.css' %}">
-</head>
-<body>
-    {% include './utils/nav.html' %}
-    <main>
+
+{% block title %}À propos - Wawel{% endblock %}
+
+{% block content %}
+
         <!-- Section héro -->
-        <section class="hero">
+        <section class="hr">
             <div class="overlay">
-                <h1 class="hero-title">À propos</h1>
-                <p class="hero-subtitle">La boulangerie au bon pain vous sert depuis 2015.</p>
+                <h1 class="hr-title">À propos</h1>
+                <p class="hr-subtitle">La boulangerie au bon pain vous sert depuis 2015.</p>
             </div>
         </section>
 
@@ -64,16 +59,6 @@
                 <p>Chez Wawel, chaque pain est cuit à la perfection, avec une attention aux détails qui fait toute la différence.</p>
             </div>
         </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2024 Wawel - Tous droits réservés</p>
-    </footer>
 
-    <script>
-        function toggleEvent(eventElement) {
-            eventElement.classList.toggle('expanded');
-        }
-    </script>
-</body>
-</html>
+{% endblock %}

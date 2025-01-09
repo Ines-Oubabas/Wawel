@@ -1,18 +1,14 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nos Produits</title>
-    <link rel="stylesheet" href="{% static 'css/produits.css' %}">
-</head>
-<body>
-    {% include './utils/nav.html' %}
-    <header>
+{% block title %}Nos Produits{% endblock %}
+
+{% block content %}
+
+    <!-- Section head -->
+    <section class="shead">
         <h1 class="page-title">Nos Produits</h1>
-    </header>
+    </section>
 
     <!-- Boucle sur les catégories -->
     {% for categorie_name, sous_categories in categories.items %}
@@ -49,6 +45,4 @@
     </section>
     {% endfor %}
     
-    <footer>&copy; 2024 Wawel - Tous droits réservés.</footer>
-</body>
-</html>
+{% endblock %}

@@ -1,15 +1,11 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contactez-nous - Wawel</title>
-    <link rel="stylesheet" href="{% static 'css/contact.css' %}" />
-  </head>
-  <body>
-    {% include './utils/nav.html' %}
+    
+{% block title %}Contactez-nous - Wawel{% endblock %}
 
+{% block body_class %}contact-page{% endblock %}
+    
+{% block content %}
     <!-- Contact Header -->
     <main>
       <h1>Contactez-nous</h1>
@@ -74,7 +70,4 @@
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer>&copy; 2024 Wawel - Tous droits réservés.</footer>
-  </body>
-</html>
+{% endblock %}

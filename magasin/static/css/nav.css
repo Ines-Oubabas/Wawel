@@ -1,55 +1,154 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Lexend", sans-serif;
-}
-
-html{
-    scroll-behavior: smooth;
-}
-nav{
+.navbar {
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: space-between; /* Sépare logo et menu */
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
     padding: 10px;
     z-index: 50;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)); /* Arrière-plan transparent */
+    border: none; /* Supprime les bordures */
 }
-.logo{
+/* Logo */
+.navbar-header .navbar-brand {
+    height: 100px; /* Ajuste la hauteur du logo */
     width: 100px;
-    height: 100px;
+    object-fit: contain; /* Maintient les proportions */
+    border-radius: 100%; /* Rend le logo circulaire */
+    background-color: #ffffff; /* Fond blanc pour le logo */
     padding: 0px;
-    object-fit: contain;
-    border-radius: 100%;
-    background-color: #ffffff;
+    margin: 0; /* Ajustez les marges ici si nécessaire */
 }
-nav ul{
+
+.navbar-header .navbar-brand:hover{
+    border-radius: 100%; /* Rend le logo circulaire */
+    background-color: #ffffff; /* Fond blanc pour le logo */
+}
+
+.navbar-header .navbar-brand {
+    margin-right: 350px; /* Ajoute un espace entre le logo et le bouton */
+    margin-bottom: 10px;
+}
+
+/* Bouton burger */
+.navbar-toggle {
+    margin-left: auto; /* Place le bouton à droite */
+}
+
+.navbar-default .navbar-nav{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 8px;
+    justify-content: flex-end;
+    gap: 40px; /* Espacement entre les liens */
+    font-size: 1.6rem;
+    padding: 30px;
     width: 100%;
-    max-width: 500px;
-
+    max-width: 900px;
+    white-space: nowrap; /* Empêche les mots des liens de se diviser sur plusieurs lignes */
+    margin-right: -70px;
 }
-nav ul li{
+.navbar-default .navbar-nav>li{
     list-style: none;
 }
-nav ul li a{
+.navbar-default .navbar-nav>li>a {
     text-decoration: none;
     color: white;
     transition: 0.3s;
     border-bottom: 1px rgba(255, 255, 255, 0) solid;
     padding: 9px 10px;
 }
-nav ul li a:hover{
+.navbar-default .navbar-nav>li>a:hover {
+    color: white;
     border-bottom: 1px white solid;
+}
+
+/* Adaptation pour petits écrans */
+@media (max-width: 768px) {
+    /* Garde le logo et le bouton burger alignés */
+    .navbar-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Menu collapsible */
+    .navbar-collapse {
+        display: flex;
+        flex-direction: row; /* Organisation des liens en ligne */
+        justify-content: center; /* Centre les liens horizontalement */
+        align-items: center; /* Centre verticalement */
+        gap: 5px; /* Espacement entre les liens */
+        width: 100%;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row; /* Organisation en ligne */
+        flex-wrap: nowrap; /* Empêche les liens de passer à la ligne */
+        justify-content: center; /* Centre les liens uniformément */
+        align-items: center;
+        gap: 3px; /* Espacement entre les liens */
+        padding: 0 3px; /* Réduit les marges internes */
+        width: 100%; /* S'assure que les liens occupent toute la largeur */
+    }
+    .navbar-nav li {
+        list-style: none;
+    }
+
+    .navbar-nav li a {
+        text-align: center;
+        padding: 0 3px;
+        font-size: 1.2rem; /* Ajuste la taille des liens */
+        white-space: nowrap; /* Empêche les liens de passer à la ligne */
+    }
+}
+
+/* Ajustement spécifique pour écrans sm-9 (taille moyenne) */
+@media (max-width: 992px) and (min-width: 768px) {
+    /* Réduction de la taille des liens */
+    .navbar-nav li a {
+        font-size: 1.4rem; /* Diminue la taille de la police */
+        padding: 5px 8px; /* Ajuste l'espacement interne des liens */
+    }
+
+    /* Ajoutez de l'espace entre le logo et les liens */
+    .navbar-header .navbar-brand {
+        margin-right: 150px; /* Réduisez cet espace si nécessaire */
+    }
+
+    /* Centrage du menu */
+    .navbar-collapse {
+        justify-content: center; /* Aligne les liens uniformément */
+    }
+
+    /* Ajustez également les gaps entre les liens */
+    .navbar-nav {
+        gap: 20px; /* Espacement entre les liens */
+    }
+}
+
+/* Animation et comportement du menu */
+.collapse {
+    display: none !important; /* Masque la navigation par défaut */
+}
+
+.collapse.in {
+    display: flex !important; /* Affiche la navigation lorsqu'elle est ouverte */
+    flex-direction: row; /* Liens en ligne */
+    justify-content: top;
+    align-items: left;
+}
+
+/* Ajout des animations pour transition fluide */
+.collapse {
+    transition: height 0.3s ease-out, opacity 0.3s ease-in;
+}
+.container {
+    padding-left: 0;
+    padding-right: 0;
 }
