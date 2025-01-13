@@ -25,7 +25,6 @@ db.sqlite3
 
 # Fichiers statiques générés
 /staticfiles/
-/media/
 
 # Fichiers migrations
 **/migrations/**
