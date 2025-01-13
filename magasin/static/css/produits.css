@@ -17,7 +17,7 @@
     font-size: 4rem;
     color: #7f161f;
     text-align: center;
-    margin: 250px 0 30px; /* Décalage du titre vers le bas */
+    margin: 200px 0 30px; /* Décalage du titre vers le bas */
     font-weight: bold;
     text-transform: uppercase;
     background: linear-gradient(to right, #fff, #fff);
@@ -104,6 +104,7 @@
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 300px;
+    height: 470px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeIn 1s forwards;
@@ -119,7 +120,7 @@
 
 .product-card img {
     width: 100%;
-    height: auto;
+    height: 50%;
     border-radius: 12px;
     margin-bottom: 15px;
 }
