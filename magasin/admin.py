@@ -69,14 +69,15 @@ def send_email_to_clients(modeladmin, request, queryset):
     })
 
     # Envoyer l'email en HTML
-    email = EmailMessage(
-        subject=subject,
-        body=html_message,
-        from_email=settings.EMAIL_HOST_USER,
-        to=emails,
-    )
-    email.content_subtype = "html"  # Définit le type de contenu à HTML
-    email.send(fail_silently=False)
+    for client in queryset:
+        email = EmailMessage(
+            subject=subject,
+            body=html_message,
+            from_email=settings.EMAIL_HOST_USER,
+            to=[client.email],  # Adresse email du client spécifique
+        )
+        email.content_subtype = "html"  # Définit le type de contenu à HTML
+        email.send(fail_silently=False)
 
     modeladmin.message_user(request, f"L'email a été envoyé avec succès à {len(emails)} clients.")
 
@@ -109,14 +110,16 @@ def send_newsletter_email(modeladmin, request, queryset):
     })
 
     # Envoyer l'email en HTML
-    email = EmailMessage(
-        subject=subject,
-        body=html_message,
-        from_email=settings.EMAIL_HOST_USER,
-        to=emails,
-    )
-    email.content_subtype = "html"
-    email.send(fail_silently=False)
+    for subscriber in queryset:
+        email = EmailMessage(
+            subject=subject,
+            body=html_message,
+            from_email=settings.EMAIL_HOST_USER,
+            to=[subscriber.email],  # Adresse email du client spécifique
+        )
+        email.content_subtype = "html"
+        email.send(fail_silently=False)
+
 
     modeladmin.message_user(request, f"Email envoyé à {len(emails)} abonnés.")
 
